@@ -10,11 +10,9 @@ function Navbar() {
         <Link className="desktopMenuListItem" to="/">Home</Link>
         <Link className="desktopMenuListItem" to="/about">About</Link>
         <Link className="desktopMenuListItem" to="/projects">Projects</Link>
+        <Link className="desktopMenuListItem" to="/education">Education</Link>
+        <Link className="desktopMenuListItem" to="/contact">Contact</Link>
       </div>
-      <button className="desktop-button">
-        <img src="" alt="" className="desktopMenuImg" />
-        Contact Me
-      </button>
     </nav>
   );
 }
