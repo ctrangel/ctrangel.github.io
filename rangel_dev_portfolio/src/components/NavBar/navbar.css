@@ -1,9 +1,16 @@
 /* for mobile version */
 @media screen and (max-width: 768px) {
+  .navbarToggle {
+    display: flex;
+    
+  }
+  .toggle {
+    
+  }
   .navbar {
-    height: 20rem;
+    height: 100%;
     width: 100%;
-    margin: 0 auto;
+    margin-top: 0;
     padding: 2px;
     display: flex;
     align-items: center;
@@ -12,6 +19,13 @@
     position: sticky;
     top: 0;
     z-index: 3;
+    background-color: #1827279a;
+    /* transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%); */
+  }
+
+  .navbar.open {
+    transform: translateY(0);
   }
 
   .links {
@@ -21,14 +35,13 @@
     margin: 5px;
     width: 100%;
   }
+
   .desktopMenuListItem {
     margin-bottom: 5px;
     width: 100%;
-    border: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-
+    font-size: 30px;
   }
 }

@@ -5,7 +5,9 @@ import { Link } from "react-scroll";
 function Navbar() {
   return (
     <nav className="navbar">
-      <img src="" alt="" />
+      <button className="navbarToggle" id="js-navbar-toggle">
+      <img className='toggle' src='rangel_dev_portfolio\src\assets\toggler.png' alt='toggle menu'/>
+      </button>
       <div className="links">
         <Link className="desktopMenuListItem" to="/">Home</Link>
         <Link className="desktopMenuListItem" to="/about">About</Link>
