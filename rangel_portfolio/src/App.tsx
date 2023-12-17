@@ -1,22 +1,20 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-
-
-
-import { ChakraProvider } from "@chakra-ui/react";
+import { CSSReset, ChakraProvider } from "@chakra-ui/react";
 import Header from "./components/Header";
 import NavDrawer from "./components/Drawer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <ChakraProvider>
-      <Header />
-      <NavDrawer />
+      <CSSReset />
+      <Navbar />
+      <div style={{ backgroundColor: "gray" }}>
+        <div style={{ height: "100vh" }}>
+          <Header />
+        </div>
+      </div>
     </ChakraProvider>
   );
 }
 
 export default App;
-
-
-

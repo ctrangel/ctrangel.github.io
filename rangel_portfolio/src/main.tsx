@@ -1,4 +1,4 @@
-import { extendTheme, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, CSSReset, extendTheme } from "@chakra-ui/react";
 import * as ReactDOM from "react-dom/client";
 import * as React from "react";
 import App from "./App";
@@ -17,12 +17,11 @@ const theme = extendTheme({
     global: {
       body: {
         bg: "black",
-        color: "white", 
+        color: "white",
       },
     },
   },
 });
-
 
 const rootElement = document.getElementById("root");
 
@@ -35,4 +34,3 @@ if (rootElement) {
     </React.StrictMode>
   );
 }
-  

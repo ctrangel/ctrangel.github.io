@@ -5,11 +5,24 @@ export const Header = () => {
       <Text
         bgGradient="linear(to-l, white, cyan)"
         bgClip="text"
-        fontSize="6xl"
+        fontSize="40px"
         fontWeight="extrabold"
         textAlign={["center", "center"]}
       >
-        Christian Rangel
+        Hi, I'm Christian
+      </Text>
+      <Text
+        color={"black"}
+        bgGradient="linear(to-l, cyan, cyan)"
+        bgClip="text"
+        fontSize="30px"
+        fontWeight="extrabold"
+        textAlign={["center", "center"]}
+      
+        marginBottom={["30px"]}
+
+      >
+        A student in software development
       </Text>
     </div>
   );

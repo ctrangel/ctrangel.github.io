@@ -1,4 +1,3 @@
-
 import {
   Drawer,
   DrawerBody,
@@ -7,16 +6,15 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
+  Flex,
 } from "@chakra-ui/react";
 import React from "react";
 import { Button, useDisclosure } from "@chakra-ui/react";
-import { Input } from "@chakra-ui/react";
+import {Link, Text } from "@chakra-ui/react";
 
 function NavDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-
-
 
   return (
     <>
@@ -30,26 +28,36 @@ function NavDrawer() {
           <DrawerHeader>Butter The Dog</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Type here..." />
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link">Contact</a>
-              </li>
-            </ul>
+            <Flex
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Text
+                    as="a"
+                    textDecoration="none"
+                    className="nav-link active"
+                  >
+                    Home
+                  </Text>
+                </li>
+                <li className="nav-item">
+                  <Text as="a" textDecoration="none" className="nav-link">
+                    About
+                  </Text>
+                </li>
+                <li className="nav-item">
+                  <Text as="a" textDecoration="none" className="nav-link">
+                    Contact
+                  </Text>
+                </li>
+              </ul>
+            </Flex>
           </DrawerBody>
 
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="cyan">Save</Button>
-          </DrawerFooter>
+          <DrawerFooter></DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>
@@ -57,4 +65,3 @@ function NavDrawer() {
 }
 
 export default NavDrawer;
-
