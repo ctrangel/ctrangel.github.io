@@ -10,10 +10,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Button, useDisclosure } from "@chakra-ui/react";
-import {Link, Text } from "@chakra-ui/react";
-import { IconButton} from "@chakra-ui/react";
+import { Link, Text } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
+import { Link as ScrollLink } from "react-scroll";
 
 function NavDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,41 +28,104 @@ function NavDrawer() {
         onClick={onOpen}
         style={{
           margin: "10px",
-      }}
+        }}
       />
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Butter The Dog</DrawerHeader>
+          <DrawerHeader></DrawerHeader>
 
           <DrawerBody>
             <Flex
               direction="column"
               justifyContent="center"
               alignItems="center"
+              style={{
+                margin: "10px",
+                fontSize: "20px",
+              }}
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Text
-                    as="a"
-                    textDecoration="none"
-                    className="nav-link active"
-                  >
-                    Home
-                  </Text>
-                </li>
-                <li className="nav-item">
-                  <Text as="a" textDecoration="none" className="nav-link">
-                    About
-                  </Text>
-                </li>
-                <li className="nav-item">
-                  <Text as="a" textDecoration="none" className="nav-link">
-                    Contact
-                  </Text>
-                </li>
-              </ul>
+              <ScrollLink
+                to="Home-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="cyan"
+                  style={{
+                    margin: "10px",
+                  }}
+                >
+                  Home
+                </Button>
+              </ScrollLink>
+              <ScrollLink
+                to="About-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="cyan"
+                  style={{
+                    margin: "10px",
+                  }}
+                >
+                  About
+                </Button>
+              </ScrollLink>
+              <ScrollLink
+                to="Projects-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="cyan"
+                  style={{
+                    margin: "10px",
+                  }}
+                >
+                  Projects
+                </Button>
+              </ScrollLink>
+              <ScrollLink
+                to="Technologies-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="cyan"
+                  style={{
+                    margin: "10px",
+                  }}
+                >
+                  Technology
+                </Button>
+              </ScrollLink>
+              <ScrollLink
+                to="Contact-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme="cyan"
+                  style={{
+                    margin: "10px",
+                  }}
+                >
+                  Contact
+                </Button>
+              </ScrollLink>
             </Flex>
           </DrawerBody>
 

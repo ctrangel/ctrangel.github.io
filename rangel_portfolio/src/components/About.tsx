@@ -6,7 +6,7 @@ const About = () => {
     <div>
       <h2>About Section</h2>
 
-      
+
     </div>
   );
 };
