@@ -1,7 +1,7 @@
 import { CSSReset, ChakraProvider } from "@chakra-ui/react";
-import Header from "./components/Header";
-import NavDrawer from "./components/Drawer";
+import  { Intro } from "./components/Intro";
 import Navbar from "./components/Navbar";
+import About from "./components/About";
 
 function App() {
   return (
@@ -10,7 +10,11 @@ function App() {
       <Navbar />
       <div style={{ backgroundColor: "gray" }}>
         <div style={{ height: "100vh" }}>
-          <Header />
+          <Intro />
+        </div>
+
+        <div style={{ height: "100vh", backgroundColor: "lightgray" }}>
+          <About />
         </div>
       </div>
     </ChakraProvider>

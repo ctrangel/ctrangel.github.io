@@ -11,6 +11,9 @@ import {
 import React from "react";
 import { Button, useDisclosure } from "@chakra-ui/react";
 import {Link, Text } from "@chakra-ui/react";
+import { IconButton} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+
 
 function NavDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,9 +21,15 @@ function NavDrawer() {
 
   return (
     <>
-      <Button colorScheme="cyan" onClick={onOpen}>
-        Open
-      </Button>
+      <IconButton
+        colorScheme="cyan"
+        aria-label="Open menu"
+        icon={<HamburgerIcon />}
+        onClick={onOpen}
+        style={{
+          margin: "10px",
+      }}
+      />
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
