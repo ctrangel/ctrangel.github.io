@@ -30,7 +30,7 @@ function App() {
       <div
         id="About-section"
         style={{
-          height: "115vh",
+          height: "160vh",
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
