@@ -43,6 +43,7 @@ const Navbar = () => {
             alt="home-icon"
             style={{
               margin: "10px",
+              marginLeft: "30px",
             }}
           />
         </Link>

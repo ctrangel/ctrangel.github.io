@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
 
+
 function App() {
   return (
     <ChakraProvider>
@@ -21,6 +22,7 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           marginTop: "-20vh",
+          position: "relative", 
         }}
       >
         <Intro />
@@ -32,9 +34,8 @@ function App() {
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           alignItems: "center",
-          marginTop: "-20vh",
         }}
       >
         <About />
