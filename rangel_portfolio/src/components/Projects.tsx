@@ -31,10 +31,35 @@ const projectsData: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <Box>
-      <Heading as="h2" mb={4}>
-        My Projects
-      </Heading>
+    <Box display={"flex"} justifyContent={"flex-start"} flexDirection={"column"}>
+      <div
+        style={{
+          marginTop: "20vh",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          borderRadius="md"
+          bg="#FFB612"
+          color="white"
+          px={4}
+          h={7}
+          m={5}
+          p={5}
+          style={{
+            fontSize: "30px",
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          Projects
+        </Box>
+      </div>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
         {projectsData.map((project) => (
           <GridItem key={project.id}>

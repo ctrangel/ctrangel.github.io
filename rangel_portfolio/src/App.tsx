@@ -43,13 +43,12 @@ function App() {
       <div
         id="Projects-section"
         style={{
-          height: "100vh",
+          height: "160vh",
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           alignItems: "center",
-          marginTop: "-20vh",
         }}
       >
         <Projects />
