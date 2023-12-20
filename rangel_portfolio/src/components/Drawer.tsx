@@ -30,10 +30,15 @@ function NavDrawer() {
           margin: "10px",
         }}
       />
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
         <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
+        <DrawerContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            backdropFilter: "blur(10px)",
+          }}
+        >
+          <DrawerCloseButton color={"white"} />
           <DrawerHeader></DrawerHeader>
 
           <DrawerBody>
