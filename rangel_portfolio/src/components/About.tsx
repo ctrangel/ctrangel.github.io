@@ -1,10 +1,12 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import { Text } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
 
 const About = () => {
   return (
-    <div>
+    <Box width={{ base: "100%", md: "50%" }}>
       <div
         style={{
           marginTop: "25vh",
@@ -60,8 +62,24 @@ const About = () => {
           I'm currently looking for an internship in Software Development or Web
           Development for Summer 2023.
         </Text>
+        <ChakraLink href="/Christian-Rangel-Resume.pdf">
+          <Text
+            color={"white"}
+            fontSize={"15px"}
+            textAlign={"left"}
+            style={{
+              width: "100%",
+              padding: "50px",
+            }}
+          >
+            View my Resume
+          </Text>
+        </ChakraLink>
       </div>
-    </div>
+      <div>
+        <Image boxShadow={"cyan 3vw 3vw"} maxW={"100%"} h={"auto"}></Image>
+      </div>
+    </Box>
   );
 };
 
