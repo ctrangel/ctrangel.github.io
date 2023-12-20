@@ -12,7 +12,7 @@ import react from '@vitejs/plugin-react'
 // })
 
 export default defineConfig({
-  base: '/ctrangel.github.io/',
+  base: './ctrangel.github.io/',
   plugins: [react()],
   server: {
     watch: {
