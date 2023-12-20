@@ -7,7 +7,7 @@ export const Intro = () => {
       <div>
         <div
           style={{
-            backgroundColor: "#e8b16d",
+            backgroundColor: "#FFB612",
             borderRadius: "10px",
             width: "fit-content",
             height: "fit-content",
