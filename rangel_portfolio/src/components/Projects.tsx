@@ -1,83 +1,331 @@
 import React from "react";
-import {Box} from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-import { Badge } from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons";
-import { Flex } from "@chakra-ui/react";
-
+import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
+import { FaGithub } from "react-icons/fa";
+import { IconButton } from "@chakra-ui/react";
 
 function Projects() {
-  const property = {
-    imageUrl: 'https://bit.ly/2Z4KKcF',
-    imageAlt: 'Rear view of modern home with pool',
-    beds: 3,
-    baths: 2,
-    title: 'Modern home in city center in the heart of historic Los Angeles',
-    formattedPrice: '$1,900.00',
-    reviewCount: 34,
-    rating: 4,
-  }
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  const project1 = {
+    title: "Project X",
+    description:
+      "A music-themed website offering headlines, music genre playback, and a playlist-building feature.",
+    image: "/media/project-x.png",
+    gif: "/media/project-x.gif",
+    link: "https://github.com/ctrangel/project-x",
+  };
+  const project2 = {
+    title: "Limitlesstech.solutions",
+    description: "A project that does something",
+    image: "###",
+    gif: "###",
+    link: "https://limitlesstech.solutions/",
+  };
+
+  const project3 = {
+    title: "Scholarship-auto-fill",
+    description:
+      "Python script that automatically fills out scholarship applications.",
+    image: "###",
+    gif: "###",
+    link: "/",
+  };
 
   return (
-    <Flex >
-
-    
-    <Box p={5} shadow='md' borderWidth='1px' flex='1' borderRadius='md'>
-    </Box> 
-    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-      <Image src={property.imageUrl} alt={property.imageAlt} />
-
-      <Box p='6'>
-        <Box display='flex' alignItems='baseline'>
-          <Badge borderRadius='full' px='2' colorScheme='teal'>
-            New
-          </Badge>
-          <Box
-            color='gray.500'
-            fontWeight='semibold'
-            letterSpacing='wide'
-            fontSize='xs'
-            textTransform='uppercase'
-            ml='2'
-          >
-            {property.beds} beds &bull; {property.baths} baths
-          </Box>
-        </Box>
-
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Image h={100} w={180} mt={115} src="/media/aot_chibi.png"></Image>
         <Box
-          mt='1'
-          fontWeight='semibold'
-          as='h4'
-          lineHeight='tight'
-          noOfLines={1}
+          borderRadius="md"
+          bg="#FFB612"
+          color="white"
+          px={4}
+          h={7}
+          p={10}
+          transition={"all .2s ease-in-out"}
+          _hover={{ bg: "cyan", color: "black", transform: "scale(1.1)" }}
+          style={{
+            fontSize: "40px",
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          {property.title}
+          Projects
         </Box>
-
-        <Box>
-          {property.formattedPrice}
-          <Box as='span' color='gray.600' fontSize='sm'>
-            / wk
+      </div>
+      <Flex flexWrap="wrap" justifyContent="center">
+        <Card
+          w={{ base: "100%", sm: "sm", md: "sm" }}
+          maxW="sm"
+          h={{ base: "auto", sm: "550", md: "550" }}
+          maxH={{ base: "auto", sm: "550", md: "550" }}
+          m={5}
+          p={5}
+          color="white"
+          style={{
+            backgroundColor: "grey",
+            borderRadius: "10px",
+            border: "5px solid cyan",
+            boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <CardHeader
+            mb={5}
+            fontSize={{ base: "25", sm: "35", md: "35" }}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            {project1.title}
+            <IconButton
+              aria-label="GitHub"
+              icon={<FaGithub />}
+              size="lg"
+              colorScheme=""
+              border="2px solid"
+              borderColor="cyan"
+              mb={4}
+              onClick={() => window.open(project1.link)}
+            />
+          </CardHeader>
+          <Box
+            p={5}
+            maxW={{ base: "100%", sm: "370", md: "370" }}
+            maxH={{ base: "auto", sm: "170", md: "170" }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "auto",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              w={{ base: "100%", sm: "370", md: "370" }}
+              h={{ base: "auto", sm: "170", md: "170" }}
+              style={{
+                transition: "all .2s ease-in-out",
+                borderRadius: "10px",
+              }}
+              src={isHovered ? project1.gif : project1.image}
+              alt={project1.title}
+            />
           </Box>
-        </Box>
 
-        <Box display='flex' mt='2' alignItems='center'>
-          {Array(5)
-            .fill('')
-            .map((_, i) => (
-              <StarIcon
-                key={i}
-                color={i < property.rating ? 'teal.500' : 'gray.300'}
-              />
-            ))}
-          <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-            {property.reviewCount} reviews
+          <CardBody>
+            <p>{project1.description}</p>
+          </CardBody>
+          <CardFooter
+            display="flex"
+            alignItems="center"
+            justifyContent="flex-start"
+            flexDirection="row"
+          >
+            <Box
+              borderRadius="md"
+              bg="#FFB612"
+              color="white"
+              px={4}
+              h={7}
+              mr={5}
+            >
+              <p>JavaScript</p>
+            </Box>
+            <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
+              <p>CSS</p>
+            </Box>
+          </CardFooter>
+        </Card>
+        <Card
+          w={{ base: "100%", sm: "sm", md: "sm" }}
+          maxW="sm"
+          h={{ base: "auto", sm: "550", md: "550" }}
+          maxH={{ base: "auto", sm: "550", md: "550" }}
+          m={5}
+          p={5}
+          color="white"
+          style={{
+            backgroundColor: "grey",
+            borderRadius: "10px",
+            border: "5px solid cyan",
+            boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <CardHeader
+            mb={5}
+            fontSize={{ base: "25", sm: "35", md: "35" }}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            {project1.title}
+            <IconButton
+              aria-label="GitHub"
+              icon={<FaGithub />}
+              size="lg"
+              colorScheme=""
+              border="2px solid"
+              borderColor="cyan"
+              mb={4}
+              onClick={() => window.open(project1.link)}
+            />
+          </CardHeader>
+          <Box
+            p={5}
+            maxW={{ base: "100%", sm: "370", md: "370" }}
+            maxH={{ base: "auto", sm: "170", md: "170" }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "auto",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              w={{ base: "100%", sm: "370", md: "370" }}
+              h={{ base: "auto", sm: "170", md: "170" }}
+              style={{
+                transition: "all .2s ease-in-out",
+                borderRadius: "10px",
+              }}
+              src={isHovered ? project1.gif : project1.image}
+              alt={project1.title}
+            />
           </Box>
-        </Box>
-      </Box>
-    </Box>
-    </Flex>
-  )
+
+          <CardBody>
+            <p>{project1.description}</p>
+          </CardBody>
+          <CardFooter
+            display="flex"
+            alignItems="center"
+            justifyContent="flex-start"
+            flexDirection="row"
+          >
+            <Box
+              borderRadius="md"
+              bg="#FFB612"
+              color="white"
+              px={4}
+              h={7}
+              mr={5}
+            >
+              <p>JavaScript</p>
+            </Box>
+            <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
+              <p>CSS</p>
+            </Box>
+          </CardFooter>
+        </Card>
+        <Card
+          w={{ base: "100%", sm: "sm", md: "sm" }}
+          maxW="sm"
+          h={{ base: "auto", sm: "550", md: "550" }}
+          maxH={{ base: "auto", sm: "550", md: "550" }}
+          m={5}
+          p={5}
+          color="white"
+          style={{
+            backgroundColor: "grey",
+            borderRadius: "10px",
+            border: "5px solid cyan",
+            boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <CardHeader
+            mb={5}
+            fontSize={{ base: "25", sm: "35", md: "35" }}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            {project1.title}
+            <IconButton
+              aria-label="GitHub"
+              icon={<FaGithub />}
+              size="lg"
+              colorScheme=""
+              border="2px solid"
+              borderColor="cyan"
+              mb={4}
+              onClick={() => window.open(project1.link)}
+            />
+          </CardHeader>
+          <Box
+            p={5}
+            maxW={{ base: "100%", sm: "370", md: "370" }}
+            maxH={{ base: "auto", sm: "170", md: "170" }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "auto",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              w={{ base: "100%", sm: "370", md: "370" }}
+              h={{ base: "auto", sm: "170", md: "170" }}
+              style={{
+                transition: "all .2s ease-in-out",
+                borderRadius: "10px",
+              }}
+              src={isHovered ? project1.gif : project1.image}
+              alt={project1.title}
+            />
+          </Box>
+
+          <CardBody>
+            <p>{project1.description}</p>
+          </CardBody>
+          <CardFooter
+            display="flex"
+            alignItems="center"
+            justifyContent="flex-start"
+            flexDirection="row"
+          >
+            <Box
+              borderRadius="md"
+              bg="#FFB612"
+              color="white"
+              px={4}
+              h={7}
+              mr={5}
+            >
+              <p>JavaScript</p>
+            </Box>
+            <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
+              <p>CSS</p>
+            </Box>
+          </CardFooter>
+        </Card>
+      </Flex>
+    </div>
+  );
 }
 
 export default Projects;

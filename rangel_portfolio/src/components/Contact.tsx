@@ -4,19 +4,33 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
-    <Box>
-      <Heading as="h2" mb={4}>
+    <Box
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Heading as="h2" mb={4} color={"white"}>
         Contact Me
       </Heading>
-      <Flex align="center" justify="center" direction="column">
-        <Tooltip label="Email" hasArrow placement="top">
+      <Flex
+        align="center"
+        justify="center"
+        direction="row"
+        m={10}
+        alignItems={"flex-start"}
+      >
+        <Tooltip label="Email" hasArrow placement="top" m={5}>
           <IconButton
             aria-label="Email"
             icon={<FaEnvelope />}
             size="lg"
             colorScheme="teal"
             mb={4}
-            onClick={() => window.open("mailto:your.email@example.com")}
+            mr={5}
+            onClick={() => window.open("mailto:rangeltchristian@gmail.com")}
           />
         </Tooltip>
         <Tooltip label="GitHub" hasArrow placement="top">
@@ -26,7 +40,8 @@ const Contact: React.FC = () => {
             size="lg"
             colorScheme="teal"
             mb={4}
-            onClick={() => window.open("https://github.com/yourusername")}
+            mr={5}
+            onClick={() => window.open("https://github.com/ctrangel")}
           />
         </Tooltip>
         <Tooltip label="LinkedIn" hasArrow placement="top">
@@ -35,8 +50,11 @@ const Contact: React.FC = () => {
             icon={<FaLinkedin />}
             size="lg"
             colorScheme="teal"
+            mr={5}
             onClick={() =>
-              window.open("https://www.linkedin.com/in/yourusername")
+              window.open(
+                "https://www.linkedin.com/in/christian-rangel-9406a0189/"
+              )
             }
           />
         </Tooltip>

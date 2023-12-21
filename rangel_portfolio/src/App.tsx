@@ -43,7 +43,7 @@ function App() {
       <div
         id="Projects-section"
         style={{
-          height: "160vh",
+          height: "292vh",
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
@@ -53,10 +53,25 @@ function App() {
       >
         <Projects />
       </div>
-      <div id="Technologies-section">
+      <div id="Technologies-section" 
+      style={{
+        height: "100vh",
+        backgroundColor: "#2d3333",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+      }}
+      >
         <Technologies />
       </div>
-      <div id="Contact-section">
+      <div id="Contact-section" style={{
+        backgroundColor: "#2d3333",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+      }}>
         <Contact />
       </div>
     </ChakraProvider>

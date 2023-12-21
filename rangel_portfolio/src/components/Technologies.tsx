@@ -30,14 +30,45 @@ const technologiesData: Technology[] = [
 
 const Technologies: React.FC = () => {
   return (
-    <Box>
-      <Heading as="h2" mb={4}>
-        Technologies
-      </Heading>
+    <Box marginTop={"20vh"} color={"Black"} style={{
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
+      <Box
+        borderRadius="md"
+        bg="#FFB612"
+        color="white"
+        px={4}
+        h={7}
+        p={10}
+        w={"sm"}
+        transition={"all .2s ease-in-out"}
+        _hover={{ bg: "cyan", color: "black", transform: "scale(1.1)" }}
+        style={{
+          fontSize: "40px",
+          display: "flex",
+          alignContent: "center",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Heading
+        >
+          Technologies
+        </Heading>
+      </Box>
+
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
         {technologiesData.map((technology) => (
           <GridItem key={technology.id}>
-            <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
+            <Box
+              borderWidth="1px"
+              borderRadius="lg"
+              overflow="hidden"
+              bg={"white"}
+            >
               <Box p="6">
                 <Heading as="h3" size="md" mb={2}>
                   {technology.name}

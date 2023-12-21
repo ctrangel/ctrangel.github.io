@@ -9,7 +9,7 @@ const About = () => {
     <Stack width={{ base: "100%", md: "50%" }}>
       <div
         style={{
-          marginTop: "25vh",
+          marginTop: "15vh",
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
