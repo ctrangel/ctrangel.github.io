@@ -1,81 +1,83 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Text,
-  Flex,
-  SimpleGrid,
-  GridItem,
-  Card,
-  CardBody,
-} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Badge } from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/icons";
+import { Flex } from "@chakra-ui/react";
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-}
 
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: "Project 1",
-    description: "Description of Project 1",
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "Description of Project 2",
-  },
-];
+function Projects() {
+  const property = {
+    imageUrl: 'https://bit.ly/2Z4KKcF',
+    imageAlt: 'Rear view of modern home with pool',
+    beds: 3,
+    baths: 2,
+    title: 'Modern home in city center in the heart of historic Los Angeles',
+    formattedPrice: '$1,900.00',
+    reviewCount: 34,
+    rating: 4,
+  }
 
-const Projects: React.FC = () => {
   return (
-    <Box display={"flex"} justifyContent={"flex-start"} flexDirection={"column"}>
-      <div
-        style={{
-          marginTop: "20vh",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          borderRadius="md"
-          bg="#FFB612"
-          color="white"
-          px={4}
-          h={7}
-          m={5}
-          p={5}
-          style={{
-            fontSize: "30px",
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          Projects
+    <Flex >
+
+    
+    <Box p={5} shadow='md' borderWidth='1px' flex='1' borderRadius='md'>
+    </Box> 
+    <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+      <Image src={property.imageUrl} alt={property.imageAlt} />
+
+      <Box p='6'>
+        <Box display='flex' alignItems='baseline'>
+          <Badge borderRadius='full' px='2' colorScheme='teal'>
+            New
+          </Badge>
+          <Box
+            color='gray.500'
+            fontWeight='semibold'
+            letterSpacing='wide'
+            fontSize='xs'
+            textTransform='uppercase'
+            ml='2'
+          >
+            {property.beds} beds &bull; {property.baths} baths
+          </Box>
         </Box>
-      </div>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-        {projectsData.map((project) => (
-          <GridItem key={project.id}>
-            <Card>
-              <CardBody>
-                <Heading as="h3" size="md" mb={2}>
-                  {project.title}
-                </Heading>
-                <Text>{project.description}</Text>
-              </CardBody>
-            </Card>
-          </GridItem>
-        ))}
-      </SimpleGrid>
+
+        <Box
+          mt='1'
+          fontWeight='semibold'
+          as='h4'
+          lineHeight='tight'
+          noOfLines={1}
+        >
+          {property.title}
+        </Box>
+
+        <Box>
+          {property.formattedPrice}
+          <Box as='span' color='gray.600' fontSize='sm'>
+            / wk
+          </Box>
+        </Box>
+
+        <Box display='flex' mt='2' alignItems='center'>
+          {Array(5)
+            .fill('')
+            .map((_, i) => (
+              <StarIcon
+                key={i}
+                color={i < property.rating ? 'teal.500' : 'gray.300'}
+              />
+            ))}
+          <Box as='span' ml='2' color='gray.600' fontSize='sm'>
+            {property.reviewCount} reviews
+          </Box>
+        </Box>
+      </Box>
     </Box>
-  );
-};
+    </Flex>
+  )
+}
 
 export default Projects;

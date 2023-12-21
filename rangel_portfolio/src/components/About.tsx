@@ -71,6 +71,8 @@ const About = () => {
               style={{
                 width: "100%",
                 padding: "50px",
+                textDecoration: "underline",
+                color: "cyan",
               }}
             >
               View my Resume
