@@ -4,7 +4,7 @@ import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
-    <Box
+    <Box pb={20}
       style={{
         display: "flex",
         flexDirection: "column",
