@@ -5,6 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
+import "./App.css";
 
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
       <div
         id="Projects-section"
         style={{
-          height: "160vh",
+          height: "292vh",
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
@@ -53,10 +54,25 @@ function App() {
       >
         <Projects />
       </div>
-      <div id="Technologies-section">
-        <Technologies />
+      <div id="Technologies-section" 
+      style={{
+        height: "100vh",
+        backgroundColor: "#2d3333",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+      }}
+      >
+        {/* <Technologies /> */}
       </div>
-      <div id="Contact-section">
+      <div id="Contact-section" style={{
+        backgroundColor: "#2d3333",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+      }}>
         <Contact />
       </div>
     </ChakraProvider>
