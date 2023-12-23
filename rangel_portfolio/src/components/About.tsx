@@ -4,6 +4,7 @@ import { Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Link as ChakraLink } from "@chakra-ui/react";
 
+
 const About = () => {
   return (
     <Stack width={{ base: "100%", md: "50%" }}>

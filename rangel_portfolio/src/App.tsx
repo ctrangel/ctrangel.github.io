@@ -1,4 +1,4 @@
-import { CSSReset, ChakraProvider } from "@chakra-ui/react";
+import { Box, CSSReset, ChakraProvider } from "@chakra-ui/react";
 import { Intro } from "./components/Intro";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -23,7 +23,7 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           marginTop: "-20vh",
-          position: "relative", 
+          position: "relative",
         }}
       >
         <Intro />
@@ -44,7 +44,7 @@ function App() {
       <div
         id="Projects-section"
         style={{
-          height: "292vh",
+          height: "350vh",
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
@@ -54,25 +54,33 @@ function App() {
       >
         <Projects />
       </div>
-      <div id="Technologies-section" 
-      style={{
-        height: "100vh",
-        backgroundColor: "#2d3333",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-      }}
+      <Box
+        id="Technologies-section"
+        // bgGradient="linear(#2d3333 0%,  #6FA25D 50%, #2d3333 100%)"
+        bg={"#2d3333"}
+        style={{
+          height: "250vh",
+
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "0",
+          
+          width: "100%",
+        }}
       >
-        {/* <Technologies /> */}
-      </div>
-      <div id="Contact-section" style={{
-        backgroundColor: "#2d3333",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-      }}>
+        <Technologies />
+      </Box>
+      <div
+        id="Contact-section"
+        style={{
+          backgroundColor: "#2d3333",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "center",
+        }}
+      >
         <Contact />
       </div>
     </ChakraProvider>

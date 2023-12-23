@@ -1,85 +1,142 @@
 import React from "react";
-import { Box, Heading, SimpleGrid, GridItem, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  GridItem,
+  Text,
+  Container,
+  Card,
+  Icon,
+} from "@chakra-ui/react";
+import { DiJsBadge } from "react-icons/di";
+import { IconButton } from "@chakra-ui/react";
+import { Tooltip } from "@chakra-ui/react";
 
-interface Technology {
-  id: number;
-  name: string;
-  description: string;
-}
+const Technologies = () => {
+  const cardStyles = {
+    p: 3,
+    bg: "gray",
+    m: "8px",
+    boxShadow: "#6FA25D 8px 6px 0px 1px",
+    color: "white",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+  };
 
-const technologiesData: Technology[] = [
-  {
-    id: 1,
-    name: "React",
-    description: "A JavaScript library for building user interfaces.",
-  },
-  {
-    id: 2,
-    name: "Chakra UI",
-    description:
-      "A simple, modular, and accessible component library for React.",
-  },
-  {
-    id: 3,
-    name: "TypeScript",
-    description:
-      "A superset of JavaScript that adds static typing to the language.",
-  },
-  // Add more technologies as needed
-];
-
-const Technologies: React.FC = () => {
   return (
-    <Box marginTop={"20vh"} color={"Black"} style={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center"
-    }}>
-      <Box
-        borderRadius="md"
-        bg="#FFB612"
-        color="white"
-        px={4}
-        h={7}
-        p={10}
-        w={"sm"}
-        transition={"all .2s ease-in-out"}
-        _hover={{ bg: "cyan", color: "black", transform: "scale(1.1)" }}
-        style={{
-          fontSize: "40px",
-          display: "flex",
-          alignContent: "center",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Heading
-        >
-          Technologies
-        </Heading>
+    <Container
+      display={"grid"}
+      justifyContent={"center"}
+      justifyItems={"center"}
+      mt={"-70vh"}
+      w={"100%"}
+    >
+      <Box w={"80px"} h={"80px"}>
+        <iframe
+          src="https://giphy.com/embed/jPsraWbk0eJHxp474l"
+          width="80px"
+          height="80px"
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
       </Box>
 
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-        {technologiesData.map((technology) => (
-          <GridItem key={technology.id}>
-            <Box
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              bg={"white"}
-            >
-              <Box p="6">
-                <Heading as="h3" size="md" mb={2}>
-                  {technology.name}
-                </Heading>
-                <Text>{technology.description}</Text>
-              </Box>
-            </Box>
-          </GridItem>
-        ))}
-      </SimpleGrid>
-    </Box>
+      <Box
+        color={"white"}
+        bg={"#905DA2"}
+        borderRadius={"10px"}
+        p={1}
+        w={"40vh"}
+        mt={"-3"}
+        display={"flex"}
+        justifyContent={"center"}
+        fontWeight={"bold"}
+        fontSize={"2em"}
+        overflow={"hidden"}
+      >
+        Technologies
+      </Box>
+
+      <Container
+        w={"100%"}
+        mx={"auto"}
+        display={"grid"}
+        justifyContent={"start"}
+        mt={16}
+      >
+        <Box
+          w={"315px"}
+          display={"flex"}
+          justifyContent={"flex-start"}
+          color={"white"}
+        >
+          <Heading>Languages</Heading>
+        </Box>
+        <Card sx={cardStyles}>
+          <Box mx={5}>
+            <DiJsBadge width={"20px"} />
+          </Box>
+          JavaScript
+        </Card>
+        <Card sx={cardStyles}>Python</Card>
+        <Card sx={cardStyles}>TypeScript</Card>
+        <Card sx={cardStyles}>SQL</Card>
+        <Card sx={cardStyles}>C</Card>
+        <Card sx={cardStyles}>Ruby</Card>
+      </Container>
+      <Container
+        w={"100%"}
+        mx={"auto"}
+        display={"grid"}
+        justifyContent={"start"}
+      >
+        <Box
+          w={"315px"}
+          display={"flex"}
+          justifyContent={"flex-start"}
+          color={"white"}
+        >
+          <Heading>FrontEnd</Heading>
+        </Box>
+        <Card sx={cardStyles}>React.js</Card>
+        <Card sx={cardStyles}>Chakra UI</Card>
+        <Card sx={cardStyles}>Bootstrap</Card>
+      </Container>
+      <Container
+        w={"100%"}
+        mx={"auto"}
+        display={"grid"}
+        justifyContent={"start"}
+      >
+        <Box
+          w={"315px"}
+          display={"flex"}
+          justifyContent={"flex-start"}
+          color={"white"}
+        >
+          <Heading>BackEnd</Heading>
+        </Box>
+        <Card sx={cardStyles}>Node.js</Card>
+      </Container>
+      <Container
+        w={"100%"}
+        mx={"auto"}
+        display={"grid"}
+        justifyContent={"start"}
+      >
+        <Box
+          w={"315px"}
+          display={"flex"}
+          justifyContent={"flex-start"}
+          color={"white"}
+        >
+          <Heading>Tools</Heading>
+        </Box>
+        <Card sx={cardStyles}>Git</Card>
+      </Container>
+    </Container>
   );
 };
 
