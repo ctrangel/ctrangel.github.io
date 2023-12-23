@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Flex, IconButton, Tooltip } from "@chakra-ui/react";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
@@ -15,21 +15,30 @@ const Contact: React.FC = () => {
       <Heading as="h2" mb={4} color={"white"}>
         Contact Me
       </Heading>
-      <Flex
-        align="center"
-        justify="center"
-        direction="row"
-        m={10}
-        alignItems={"flex-start"}
+      <p
+        style={{
+          fontSize: "15px",
+          color: "white",
+          textAlign: "center",
+          width: "70%",
+        }}
+      >Feel free to contact me with any questions concerns, or just want to connect</p>
+      <Box
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
+        
         <Tooltip label="Email" hasArrow placement="top" m={5}>
           <IconButton
             aria-label="Email"
             icon={<FaEnvelope />}
             size="lg"
-            colorScheme="teal"
-            mb={4}
-            mr={5}
+            colorScheme="blue"
+            m={5}
             onClick={() => window.open("mailto:rangeltchristian@gmail.com")}
           />
         </Tooltip>
@@ -38,9 +47,8 @@ const Contact: React.FC = () => {
             aria-label="GitHub"
             icon={<FaGithub />}
             size="lg"
-            colorScheme="teal"
-            mb={4}
-            mr={5}
+            colorScheme="green"
+            m={5}
             onClick={() => window.open("https://github.com/ctrangel")}
           />
         </Tooltip>
@@ -49,8 +57,8 @@ const Contact: React.FC = () => {
             aria-label="LinkedIn"
             icon={<FaLinkedin />}
             size="lg"
-            colorScheme="teal"
-            mr={5}
+            colorScheme="purple"
+            m={5}
             onClick={() =>
               window.open(
                 "https://www.linkedin.com/in/christian-rangel-9406a0189/"
@@ -58,8 +66,18 @@ const Contact: React.FC = () => {
             }
           />
         </Tooltip>
-        {/* Add more social icons as needed */}
-      </Flex>
+        <Tooltip label="Instagram" hasArrow placement="top">
+          <IconButton
+            aria-label="Instagram"
+            icon={<FaInstagram />}
+            size="lg"
+            colorScheme="yellow"
+            m={5}
+            onClick={() => window.open("https://www.instagram.com/crangel__/")}
+          />
+        </Tooltip>
+
+      </Box>
     </Box>
   );
 };

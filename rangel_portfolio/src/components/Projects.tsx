@@ -4,9 +4,38 @@ import { Image } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { IconButton } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
+import "../App.css";
 
 function Projects() {
   const [isHovered, setIsHovered] = React.useState(false);
+
+  const displaySkills = (project: { skills: string | any[] }) => {
+    //typescript kept yelling at me until I added the type, its so mean
+    let result = [];
+
+    for (let i = 0; i < project.skills.length; i++) {
+      result.push(
+        <Box
+          key={i}
+          borderRadius="md"
+          bg="#FFB612"
+          color="white"
+          px={4}
+          h={7}
+          mr={5}
+          mt={5}
+        >
+          <p>{project.skills[i]}</p>
+        </Box>
+      );
+      // console.log(project.skills[i]);
+    }
+
+    return result;
+  };
+
+ 
 
   const project1 = {
     title: "Project X",
@@ -14,27 +43,33 @@ function Projects() {
       "A music-themed website offering headlines, music genre playback, and a playlist-building feature.",
     image: "/media/project-x.png",
     gif: "/media/project-x.gif",
-    link: "https://github.com/ctrangel/project-x",
+    gLink: "https://github.com/ctrangel/project-x",
+    link: "/",
+    skills: ["JavaScript", "CSS"],
   };
   const project2 = {
     title: "Limitlesstech.solutions",
     description: "A project that does something",
-    image: "###",
-    gif: "###",
+    image: "/media/limitless-solutions.png",
+    gif: "/media/limitless-solutions.gif",
+    gLink: "https://github.com/ctrangel/Limitless-consulting",
     link: "https://limitlesstech.solutions/",
+    skills: ["JavaScript", "CSS"],
   };
 
   const project3 = {
     title: "Scholarship-auto-fill",
     description:
       "Python script that automatically fills out scholarship applications.",
-    image: "###",
-    gif: "###",
+    image: "/media/big_kurt.jpg",
+    gif: "/media/form_script.gif",
+    gLink: "https://github.com/ctrangel/form-auto-fill-public",
     link: "/",
+    skills: ["Python", "Selenium", "node.js"],
   };
 
   return (
-    <div>
+    <div style={{width: "100%"}}>
       <div
         style={{
           display: "flex",
@@ -64,13 +99,20 @@ function Projects() {
           Projects
         </Box>
       </div>
-      <Flex flexWrap="wrap" justifyContent="center">
+      <SimpleGrid id="projects-grid"
+        minChildWidth="3px"
+        spacing="40px"
+        justifyItems="center"
+        w="100%"
+        overflow="hidden"
+
+      >
         <Card
-          w={{ base: "100%", sm: "sm", md: "sm" }}
-          maxW="sm"
-          h={{ base: "auto", sm: "550", md: "550" }}
-          maxH={{ base: "auto", sm: "550", md: "550" }}
-          m={5}
+          w={{ base: "330px", sm: "sm", md: "sm" }}
+          maxW={{ base: "100%", sm: "sm", md: "sm" }}
+          h={{ sm: "550", md: "550" }}
+          maxH={{ sm: "550", md: "550" }}
+          m={{ base: "30px", sm: 4, md: 4 }}
           p={5}
           color="white"
           style={{
@@ -89,7 +131,10 @@ function Projects() {
               alignItems: "center",
             }}
           >
-            {project1.title}
+            <Box maxW={"237px"} fontSize={"24px"}>
+              {project1.title}
+            </Box>
+
             <IconButton
               aria-label="GitHub"
               icon={<FaGithub />}
@@ -136,7 +181,8 @@ function Projects() {
             justifyContent="flex-start"
             flexDirection="row"
           >
-            <Box
+            {displaySkills(project1)}
+            {/* <Box
               borderRadius="md"
               bg="#FFB612"
               color="white"
@@ -148,15 +194,15 @@ function Projects() {
             </Box>
             <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
               <p>CSS</p>
-            </Box>
+            </Box> */}
           </CardFooter>
         </Card>
         <Card
-          w={{ base: "100%", sm: "sm", md: "sm" }}
-          maxW="sm"
-          h={{ base: "auto", sm: "550", md: "550" }}
-          maxH={{ base: "auto", sm: "550", md: "550" }}
-          m={5}
+          w={{ base: "330px", sm: "sm", md: "sm" }}
+          maxW={{ base: "100%", sm: "sm", md: "sm" }}
+          h={{ sm: "550", md: "550" }}
+          maxH={{ sm: "550", md: "550" }}
+          m={{ base: "30px", sm: 4, md: 4 }}
           p={5}
           color="white"
           style={{
@@ -175,7 +221,10 @@ function Projects() {
               alignItems: "center",
             }}
           >
-            {project1.title}
+            <Box maxW={"237px"} fontSize={"20px"}>
+              {project2.title}
+            </Box>
+
             <IconButton
               aria-label="GitHub"
               icon={<FaGithub />}
@@ -183,8 +232,8 @@ function Projects() {
               colorScheme=""
               border="2px solid"
               borderColor="cyan"
-              mb={4}
-              onClick={() => window.open(project1.link)}
+              m={4}
+              onClick={() => window.open(project2.link)}
             />
           </CardHeader>
           <Box
@@ -208,13 +257,13 @@ function Projects() {
                 transition: "all .2s ease-in-out",
                 borderRadius: "10px",
               }}
-              src={isHovered ? project1.gif : project1.image}
-              alt={project1.title}
+              src={isHovered ? project2.gif : project2.image}
+              alt={project2.title}
             />
           </Box>
 
           <CardBody>
-            <p>{project1.description}</p>
+            <p>{project2.description}</p>
           </CardBody>
           <CardFooter
             display="flex"
@@ -222,7 +271,8 @@ function Projects() {
             justifyContent="flex-start"
             flexDirection="row"
           >
-            <Box
+            {displaySkills(project2)}
+            {/* <Box
               borderRadius="md"
               bg="#FFB612"
               color="white"
@@ -234,15 +284,15 @@ function Projects() {
             </Box>
             <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
               <p>CSS</p>
-            </Box>
+            </Box> */}
           </CardFooter>
         </Card>
         <Card
-          w={{ base: "100%", sm: "sm", md: "sm" }}
-          maxW="sm"
-          h={{ base: "auto", sm: "550", md: "550" }}
-          maxH={{ base: "auto", sm: "550", md: "550" }}
-          m={5}
+          w={{ base: "330px", sm: "sm", md: "sm" }}
+          maxW={{ base: "100%", sm: "sm", md: "sm" }}
+          h={{ sm: "550", md: "550" }}
+          maxH={{ sm: "550", md: "550" }}
+          m={{ base: "30px", sm: 4, md: 4 }}
           p={5}
           color="white"
           style={{
@@ -261,7 +311,10 @@ function Projects() {
               alignItems: "center",
             }}
           >
-            {project1.title}
+            <Box maxW={"237px"} fontSize={"24px"}>
+              {project3.title}
+            </Box>
+
             <IconButton
               aria-label="GitHub"
               icon={<FaGithub />}
@@ -270,7 +323,7 @@ function Projects() {
               border="2px solid"
               borderColor="cyan"
               mb={4}
-              onClick={() => window.open(project1.link)}
+              onClick={() => window.open(project3.gLink)}
             />
           </CardHeader>
           <Box
@@ -294,21 +347,25 @@ function Projects() {
                 transition: "all .2s ease-in-out",
                 borderRadius: "10px",
               }}
-              src={isHovered ? project1.gif : project1.image}
-              alt={project1.title}
+              src={isHovered ? project3.gif : project3.image}
+              alt={project3.title}
             />
           </Box>
 
           <CardBody>
-            <p>{project1.description}</p>
+            <p>{project3.description}</p>
           </CardBody>
           <CardFooter
             display="flex"
             alignItems="center"
             justifyContent="flex-start"
             flexDirection="row"
+            flexWrap={"wrap"}
+            maxWidth="100%"
+            overflow={"hidden"}
           >
-            <Box
+            {displaySkills(project3)}
+            {/* <Box
               borderRadius="md"
               bg="#FFB612"
               color="white"
@@ -316,14 +373,14 @@ function Projects() {
               h={7}
               mr={5}
             >
-              <p>JavaScript</p>
+              <p>Python</p>
             </Box>
             <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
-              <p>CSS</p>
-            </Box>
+              <p>Selenium</p>
+            </Box> */}
           </CardFooter>
         </Card>
-      </Flex>
+      </SimpleGrid>
     </div>
   );
 }
