@@ -16,7 +16,6 @@ function App() {
       <div
         id="Home-section"
         style={{
-          backgroundColor: "#2d3333",
           height: "115vh",
           display: "flex",
           flexDirection: "column",
@@ -28,6 +27,7 @@ function App() {
       >
         <Intro />
       </div>
+      
       <div
         id="About-section"
         style={{
@@ -59,13 +59,12 @@ function App() {
         // bgGradient="linear(#2d3333 0%,  #6FA25D 50%, #2d3333 100%)"
         bg={"#2d3333"}
         style={{
-          height: "250vh",
+          height: "180vh",
 
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          margin: "0",
-          
+
           width: "100%",
         }}
       >
