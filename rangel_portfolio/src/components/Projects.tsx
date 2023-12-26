@@ -87,8 +87,8 @@ const shake = `${animation} infinite .5s`;
 
 const cardStyles = () => ({  // for the cards in the projects grid
   mt: { base: 3 },
-  w: { base: "300px", sm: "340px", lg: "320px" },
-  maxW: { base: "300px", sm: "340px" },
+  w: { base: "300px", sm: "340px", lg: "320px", xl: "390px" },
+  maxW: { base: "300px", sm: "340px", lg: "320px", xl: "390" },
   h: { base: "500px" },
   maxH: { base: "500px" },
   p: 1,
