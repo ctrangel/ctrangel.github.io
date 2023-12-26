@@ -68,7 +68,7 @@ function App() {
       </Box>
       <Box
         id="Technologies-section"
-        // bgGradient="linear(#2d3333 0%,  #6FA25D 50%, #2d3333 100%)"
+        
         bg={"#2d3333"}
         style={{
           height: "180vh",

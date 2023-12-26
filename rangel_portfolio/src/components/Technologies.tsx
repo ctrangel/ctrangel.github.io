@@ -26,7 +26,7 @@ const Technologies = () => {
   };
 
   return (
-    <Container
+    <Box
       display={"grid"}
       justifyContent={"center"}
       justifyItems={"center"}
@@ -136,7 +136,7 @@ const Technologies = () => {
         </Box>
         <Card sx={cardStyles}>Git</Card>
       </Container>
-    </Container>
+    </Box>
   );
 };
 
