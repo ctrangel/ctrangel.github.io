@@ -26,11 +26,11 @@ const Technologies = () => {
   };
 
   return (
-    <Container
+    <Box
       display={"grid"}
       justifyContent={"center"}
       justifyItems={"center"}
-      mt={"-70vh"}
+      mt={"-20vh"}
       w={"100%"}
     >
       <Box w={"80px"} h={"80px"}>
@@ -43,7 +43,7 @@ const Technologies = () => {
         ></iframe>
       </Box>
 
-      <Box
+      <Box id="Technologies-header"
         color={"white"}
         bg={"#905DA2"}
         borderRadius={"10px"}
@@ -136,7 +136,7 @@ const Technologies = () => {
         </Box>
         <Card sx={cardStyles}>Git</Card>
       </Container>
-    </Container>
+    </Box>
   );
 };
 

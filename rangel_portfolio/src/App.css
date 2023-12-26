@@ -10,13 +10,14 @@ body {
     background-color: #2d3333 !important;  ;
 }
 
-@media screen and (min-width: 1299px) {
+/* @media screen and (min-width: 1299px) {
     #projects-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1em;
         padding-top: 10px;
     }
+
     
 }
 
@@ -57,3 +58,9 @@ body {
         padding-left: 180px;
     }
 }
+
+@media screen and (min-width: 878px) {
+    #Projects-section {
+        height: 169vh !important;
+    }
+} */
