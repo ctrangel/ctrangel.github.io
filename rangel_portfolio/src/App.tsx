@@ -55,8 +55,8 @@ function App() {
       </Box>
       <Box
         id="Projects-section"
+        h={{base: "210vh", md: "150vh", lg: "90vh" }}
         style={{
-          height: "350vh",
           backgroundColor: "#2d3333",
           display: "flex",
           flexDirection: "column",
