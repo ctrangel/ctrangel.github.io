@@ -11,6 +11,6 @@ visit here: https://ctrangel.github.io/
 
 **Tech Used**: React, TypeScript, JavaScript, CSS.
 
-The project's interface was built using Chakra UI and styled with the Chakra UI's Styled System in addition to CSS styling.
+The project's interface was built using Chakra UI and styled with the Chakra UI's Styled System.
 
 The site is fully responsive for all devices.
