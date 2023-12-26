@@ -10,7 +10,7 @@ body {
     background-color: #2d3333 !important;  ;
 }
 
-@media screen and (min-width: 1299px) {
+/* @media screen and (min-width: 1299px) {
     #projects-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -63,4 +63,4 @@ body {
     #Projects-section {
         height: 169vh !important;
     }
-}
+} */

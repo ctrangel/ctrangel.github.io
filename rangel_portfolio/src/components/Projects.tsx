@@ -5,6 +5,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
 import { IconButton } from "@chakra-ui/react";
 import { SimpleGrid } from "@chakra-ui/react";
+
 import "../App.css";
 
 function Projects() {
@@ -82,8 +83,25 @@ function Projects() {
   }
 `;
 const shake = `${animation} infinite .5s`;
+
+
+const cardStyles = () => ({  // for the cards in the projects grid
+  mt: { base: 3 },
+  w: { base: "300px", sm: "340px" },
+  maxW: { base: "300px", sm: "340px" },
+  h: { base: "500px" },
+  maxH: { base: "500px" },
+  m: {}, 
+  p: 1,
+  color: "white",
+  bgColor: "grey",
+  borderRadius: "10px",
+  border: "5px solid cyan",
+  boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
+});
+
+
   return (
-    
     <div style={{ width: "100%" }}>
       <div
         style={{
@@ -102,7 +120,7 @@ const shake = `${animation} infinite .5s`;
           h={7}
           p={10}
           transition={"all .2s ease-in-out"}
-          _hover={{ bg: "cyan", color: "black",  animation: shake}}
+          _hover={{ bg: "cyan", color: "black", animation: shake }}
           style={{
             fontSize: "40px",
             display: "flex",
@@ -115,28 +133,20 @@ const shake = `${animation} infinite .5s`;
         </Box>
       </div>
       <SimpleGrid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          sm: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
+        }}
         id="projects-grid"
-        minChildWidth="3px"
-        spacing="40px"
+        spacing=""
         justifyItems="center"
+        justifyContent={"center"}
         w="100%"
         overflow="hidden"
       >
-        <Card
-          w={{ base: "330px", sm: "sm", md: "sm" }}
-          maxW={{ base: "100%", sm: "sm", md: "sm" }}
-          h={{ sm: "550", md: "550" }}
-          maxH={{ sm: "550", md: "550" }}
-          m={{ base: "30px", sm: 4, md: 4 }}
-          p={5}
-          color="white"
-          style={{
-            backgroundColor: "grey",
-            borderRadius: "10px",
-            border: "5px solid cyan",
-            boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
-          }}
-        >
+        <Card {...cardStyles()}>
           <CardHeader
             mb={5}
             fontSize={{ base: "25", sm: "35", md: "35" }}
@@ -212,21 +222,7 @@ const shake = `${animation} infinite .5s`;
             </Box> */}
           </CardFooter>
         </Card>
-        <Card
-          w={{ base: "330px", sm: "sm", md: "sm" }}
-          maxW={{ base: "100%", sm: "sm", md: "sm" }}
-          h={{ sm: "550", md: "550" }}
-          maxH={{ sm: "550", md: "550" }}
-          m={{ base: "30px", sm: 4, md: 4 }}
-          p={5}
-          color="white"
-          style={{
-            backgroundColor: "grey",
-            borderRadius: "10px",
-            border: "5px solid cyan",
-            boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
-          }}
-        >
+        <Card {...cardStyles()}>
           <CardHeader
             mb={5}
             fontSize={{ base: "25", sm: "35", md: "35" }}
@@ -302,21 +298,7 @@ const shake = `${animation} infinite .5s`;
             </Box> */}
           </CardFooter>
         </Card>
-        <Card
-          w={{ base: "330px", sm: "sm", md: "sm" }}
-          maxW={{ base: "100%", sm: "sm", md: "sm" }}
-          h={{ sm: "550", md: "550" }}
-          maxH={{ sm: "550", md: "550" }}
-          m={{ base: "30px", sm: 4, md: 4 }}
-          p={5}
-          color="white"
-          style={{
-            backgroundColor: "grey",
-            borderRadius: "10px",
-            border: "5px solid cyan",
-            boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
-          }}
-        >
+        <Card {...cardStyles()}>
           <CardHeader
             mb={5}
             fontSize={{ base: "25", sm: "35", md: "35" }}
