@@ -87,11 +87,10 @@ const shake = `${animation} infinite .5s`;
 
 const cardStyles = () => ({  // for the cards in the projects grid
   mt: { base: 3 },
-  w: { base: "300px", sm: "340px" },
+  w: { base: "300px", sm: "340px", lg: "320px" },
   maxW: { base: "300px", sm: "340px" },
   h: { base: "500px" },
   maxH: { base: "500px" },
-  m: {}, 
   p: 1,
   color: "white",
   bgColor: "grey",
@@ -140,11 +139,12 @@ const cardStyles = () => ({  // for the cards in the projects grid
           lg: "repeat(3, 1fr)",
         }}
         id="projects-grid"
-        spacing=""
+        spacing="8px"
         justifyItems="center"
         justifyContent={"center"}
         w="100%"
         overflow="hidden"
+        px={{base: "50px", xl: "400px", "2xl": "450px"}}
       >
         <Card {...cardStyles()}>
           <CardHeader

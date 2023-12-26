@@ -1,4 +1,4 @@
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container } from "@chakra-ui/react";
 import { Intro } from "./components/Intro";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
@@ -14,7 +14,7 @@ const breakpoints = {
   md: "768px",
   lg: "1024px",
   xl: "1200px",
-  "2xl": "1536px",
+  "2xl": "1580px",
 };
 
 const theme = extendTheme({ breakpoints });
@@ -25,7 +25,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>  
       <Navbar />
-      <div
+      <Box as={"section"}
         id="Home-section"
         style={{
           height: "115vh",
@@ -38,9 +38,9 @@ function App() {
         }}
       >
         <Intro />
-      </div>
+      </Box>
       
-      <div
+      <Box
         id="About-section"
         style={{
           height: "160vh",
@@ -52,8 +52,8 @@ function App() {
         }}
       >
         <About />
-      </div>
-      <div
+      </Box>
+      <Box
         id="Projects-section"
         style={{
           height: "350vh",
@@ -65,7 +65,7 @@ function App() {
         }}
       >
         <Projects />
-      </div>
+      </Box>
       <Box
         id="Technologies-section"
         // bgGradient="linear(#2d3333 0%,  #6FA25D 50%, #2d3333 100%)"
