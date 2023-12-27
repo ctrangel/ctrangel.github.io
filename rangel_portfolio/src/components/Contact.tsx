@@ -1,28 +1,23 @@
 import React from "react";
 import { Box, Heading, Flex, IconButton, Tooltip } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Text } from "@chakra-ui/react";
 
 const Contact: React.FC = () => {
   return (
-    <Box 
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
     >
       <Heading as="h2" mb={4} color={"white"}>
         Contact Me
       </Heading>
-      <p
-        style={{
-          fontSize: "15px",
-          color: "white",
-          textAlign: "center",
-          width: "70%",
-        }}
-      >Feel free to contact me with any questions concerns, or just want to connect</p>
+      <Text fontSize="15px" color="white" textAlign="center" width="70%">
+        Feel free to contact me with any questions concerns, or just want to
+        connect
+      </Text>
       <Box
         style={{
           display: "flex",
@@ -31,7 +26,6 @@ const Contact: React.FC = () => {
           alignItems: "center",
         }}
       >
-        
         <Tooltip label="Email" hasArrow placement="top" m={5}>
           <IconButton
             aria-label="Email"
@@ -76,7 +70,6 @@ const Contact: React.FC = () => {
             onClick={() => window.open("https://www.instagram.com/crangel__/")}
           />
         </Tooltip>
-
       </Box>
     </Box>
   );

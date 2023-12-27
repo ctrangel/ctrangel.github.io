@@ -26,17 +26,13 @@ function NavDrawer() {
         aria-label="Open menu"
         icon={<HamburgerIcon />}
         onClick={onOpen}
-        style={{
-          margin: "10px",
-        }}
+        m={"10px"}
       />
       <Drawer isOpen={isOpen} placement="top" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            backdropFilter: "blur(10px)",
-          }}
+          backgroundColor="rgba(0, 0, 0, 0.7)"
+          backdropFilter="blur(10px)"
         >
           <DrawerCloseButton color={"white"} />
           <DrawerHeader></DrawerHeader>
@@ -46,10 +42,8 @@ function NavDrawer() {
               direction="column"
               justifyContent="center"
               alignItems="center"
-              style={{
-                margin: "10px",
-                fontSize: "20px",
-              }}
+              margin="10px"
+              fontSize="20px"
             >
               <ScrollLink
                 to="Home-section"
@@ -60,9 +54,7 @@ function NavDrawer() {
                 <Button
                   variant="ghost"
                   colorScheme="cyan"
-                  style={{
-                    margin: "10px",
-                  }}
+                  m={"10px"}
                 >
                   Home
                 </Button>
@@ -76,9 +68,7 @@ function NavDrawer() {
                 <Button
                   variant="ghost"
                   colorScheme="cyan"
-                  style={{
-                    margin: "10px",
-                  }}
+                  m={"10px"}
                 >
                   About
                 </Button>
@@ -92,9 +82,7 @@ function NavDrawer() {
                 <Button
                   variant="ghost"
                   colorScheme="cyan"
-                  style={{
-                    margin: "10px",
-                  }}
+                  m={"10px"}
                 >
                   Projects
                 </Button>
@@ -108,9 +96,7 @@ function NavDrawer() {
                 <Button
                   variant="ghost"
                   colorScheme="cyan"
-                  style={{
-                    margin: "10px",
-                  }}
+                  m={"10px"}
                 >
                   Technology
                 </Button>
@@ -124,9 +110,7 @@ function NavDrawer() {
                 <Button
                   variant="ghost"
                   colorScheme="cyan"
-                  style={{
-                    margin: "10px",
-                  }}
+                  m={"10px"}
                 >
                   Contact
                 </Button>
