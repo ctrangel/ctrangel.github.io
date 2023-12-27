@@ -89,8 +89,8 @@ function Projects() {
     mt: { base: 3 },
     w: { base: "300px", sm: "340px", lg: "320px", xl: "390px" },
     maxW: { base: "300px", sm: "340px", lg: "320px", xl: "390" },
-    h: { base: "520px" },
-    maxH: { base: "520px" },
+    h: { base: "500px" },
+    maxH: { base: "500px" },
     p: 1,
     color: "white",
     bgColor: "grey",
@@ -309,8 +309,6 @@ function Projects() {
             justifyContent="flex-start"
             flexDirection="row"
             flexWrap={"wrap"}
-            maxWidth="100%"
-            overflow={"hidden"}
           >
             {displaySkills(project3)}
           </CardFooter>

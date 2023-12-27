@@ -50,7 +50,7 @@ function App() {
       </Box>
       <Box
         id="Projects-section"
-        h={{ base: "210vh", md: "150vh", lg: "90vh" }}
+        h={"auto"}
         backgroundColor="#2d3333"
         display="flex"
         flexDirection="column"
@@ -62,20 +62,22 @@ function App() {
       <Box
         id="Technologies-section"
         bg={"#2d3333"}
-        h="180vh"
+        h={"auto"}
         display="flex"
         justifyContent="center"
         alignItems="center"
         w="100%"
+        mt={{base: "142px" }}
       >
         <Technologies />
       </Box>
       <Box
         id="Contact-section"
+        h={{base: "500px"}}
         backgroundColor="#2d3333"
         display="flex"
         flexDirection="column"
-        justifyContent="flex-start"
+        justifyContent="flex-end"
         alignItems="center"
       >
         <Contact />
