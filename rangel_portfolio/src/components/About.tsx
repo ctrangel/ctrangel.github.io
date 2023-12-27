@@ -1,4 +1,4 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, Container, Flex, Stack } from "@chakra-ui/react";
 import React from "react";
 import { Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
@@ -7,7 +7,7 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 
 const About = () => {
   return (
-    <Stack width={{ base: "100%", md: "50%" }}>
+    <Stack p={10}>
       <Box
         mt="15vh"
         display="flex"
@@ -35,14 +35,20 @@ const About = () => {
           Me
         </Text>
       </Box>
-      <div>
-        <div>
+      <Flex
+      display={"flex"}
+      flexDir={{base: "column", md: "row"}}
+
+      >
+        <Container>
           <Text
             color={"white"}
             fontSize={"15px"}
             textAlign={"left"}
             w="100%"
-            padding="50px"
+            
+            p={{base: 0, md: 5}}
+            
           >
             Hello! I'm Christian and I'm a second year Computer Science student
             major at Point Park University with an interest in web development
@@ -70,7 +76,7 @@ const About = () => {
               View my Resume
             </Text>
           </ChakraLink>
-        </div>
+        </Container>
         <Box
           display="flex"
           flexDirection="row"
@@ -79,12 +85,13 @@ const About = () => {
         >
           <Image
             boxShadow={"cyan 3vw 3vw"}
-            w={"50%"}
-            h={"39vh"}
+            w={{base: "270px", sm: "315px"}}
+            h={{base: "270px", sm: "315px"}}
+            m={{base: 0, md: 5}}
             src="/DSC_0021-removebg-preview.png"
           ></Image>
         </Box>
-      </div>
+      </Flex>
     </Stack>
   );
 };

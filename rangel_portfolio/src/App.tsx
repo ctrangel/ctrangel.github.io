@@ -39,7 +39,7 @@ function App() {
 
       <Box
         id="About-section"
-        h="160vh"
+        h="auto"
         backgroundColor="#2d3333"
         display="flex"
         flexDirection="column"
@@ -56,6 +56,7 @@ function App() {
         flexDirection="column"
         justifyContent="flex-start"
         alignItems="center"
+        mt={"100px"}
       >
         <Projects />
       </Box>
