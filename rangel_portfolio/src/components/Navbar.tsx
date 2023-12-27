@@ -48,6 +48,7 @@ const Navbar = () => {
       alignItems="center"
       px={4}
       py={2}
+      w={"auto"}
     >
       {/* Home icon */}
       <Box
