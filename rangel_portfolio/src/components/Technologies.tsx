@@ -30,7 +30,7 @@ const Technologies = () => {
       display={"grid"}
       justifyContent={"center"}
       justifyItems={"center"}
-      mt={"-20vh"}
+      mt={"103px"}
       w={"100%"}
     >
       <Box w={"80px"} h={"80px"}>
