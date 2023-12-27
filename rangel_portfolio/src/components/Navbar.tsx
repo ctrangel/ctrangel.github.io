@@ -91,13 +91,11 @@ const Navbar = () => {
               onClick={closeNavbarOnDesktop}
               px={2}
               color="white"
-              style={{
-                fontSize: "1.2rem",
-                fontWeight: "bold",
-                margin: "0 10px",
-                textDecoration: "none",
-                transition: "all 0.2s ease-in-out",
-              }}
+              fontSize="1.2rem"
+              fontWeight="bold"
+              margin="0 10px"
+              textDecoration="none"
+              transition="all 0.2s ease-in-out"
               _hover={{
                 bg: "#FFB612",
                 borderRadius: "5px",

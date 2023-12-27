@@ -82,33 +82,30 @@ function Projects() {
     transform: translate3d(4px, 0, 0);
   }
 `;
-const shake = `${animation} infinite .5s`;
+  const shake = `${animation} infinite .5s`;
 
-
-const cardStyles = () => ({  // for the cards in the projects grid
-  mt: { base: 3 },
-  w: { base: "300px", sm: "340px", lg: "320px", xl: "390px" },
-  maxW: { base: "300px", sm: "340px", lg: "320px", xl: "390" },
-  h: { base: "500px" },
-  maxH: { base: "500px" },
-  p: 1,
-  color: "white",
-  bgColor: "grey",
-  borderRadius: "10px",
-  border: "5px solid cyan",
-  boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
-});
-
+  const cardStyles = () => ({
+    // for the cards in the projects grid
+    mt: { base: 3 },
+    w: { base: "300px", sm: "340px", lg: "320px", xl: "390px" },
+    maxW: { base: "300px", sm: "340px", lg: "320px", xl: "390" },
+    h: { base: "520px" },
+    maxH: { base: "520px" },
+    p: 1,
+    color: "white",
+    bgColor: "grey",
+    borderRadius: "10px",
+    border: "5px solid cyan",
+    boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
+  });
 
   return (
-    <div style={{ width: "100%" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+    <Box as={"section"} w={"100%"}>
+      <Box
+        display={"flex"}
+        flexDir={"column"}
+        justifyContent={"center"}
+        alignItems={"center"}
       >
         <Image h={100} w={180} mt={115} src="/media/aot_chibi.png"></Image>
         <Box
@@ -120,17 +117,15 @@ const cardStyles = () => ({  // for the cards in the projects grid
           p={10}
           transition={"all .2s ease-in-out"}
           _hover={{ bg: "cyan", color: "black", animation: shake }}
-          style={{
-            fontSize: "40px",
-            display: "flex",
-            alignContent: "center",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          fontSize={"40px"}
+          display={"flex"}
+          alignContent={"center"}
+          justifyContent={"center"}
+          alignItems={"center"}
         >
           Projects
         </Box>
-      </div>
+      </Box>
       <SimpleGrid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -144,17 +139,15 @@ const cardStyles = () => ({  // for the cards in the projects grid
         justifyContent={"center"}
         w="100%"
         overflow="hidden"
-        px={{base: "50px", xl: "400px", "2xl": "450px"}}
+        px={{ base: "50px", xl: "400px", "2xl": "450px" }}
       >
         <Card {...cardStyles()}>
           <CardHeader
             mb={5}
             fontSize={{ base: "25", sm: "35", md: "35" }}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
+            display={"flex"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
           >
             <Box maxW={"237px"} fontSize={"24px"}>
               {project1.title}
@@ -177,21 +170,17 @@ const cardStyles = () => ({  // for the cards in the projects grid
             maxH={{ base: "auto", sm: "170", md: "170" }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              margin: "auto",
-              overflow: "hidden",
-            }}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            m={"auto"}
+            overflow={"hidden"}
           >
             <Image
               w={{ base: "100%", sm: "370", md: "370" }}
               h={{ base: "auto", sm: "170", md: "170" }}
-              style={{
-                transition: "all .2s ease-in-out",
-                borderRadius: "10px",
-              }}
+              transition={"ll .2s ease-in-out"}
+              borderRadius={"10px"}
               src={isHovered ? project1.gif : project1.image}
               alt={project1.title}
             />
@@ -207,30 +196,15 @@ const cardStyles = () => ({  // for the cards in the projects grid
             flexDirection="row"
           >
             {displaySkills(project1)}
-            {/* <Box
-              borderRadius="md"
-              bg="#FFB612"
-              color="white"
-              px={4}
-              h={7}
-              mr={5}
-            >
-              <p>JavaScript</p>
-            </Box>
-            <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
-              <p>CSS</p>
-            </Box> */}
           </CardFooter>
         </Card>
         <Card {...cardStyles()}>
           <CardHeader
             mb={5}
             fontSize={{ base: "25", sm: "35", md: "35" }}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
+            display={"flex"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
           >
             <Box maxW={"237px"} fontSize={"20px"}>
               {project2.title}
@@ -253,21 +227,17 @@ const cardStyles = () => ({  // for the cards in the projects grid
             maxH={{ base: "auto", sm: "170", md: "170" }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              margin: "auto",
-              overflow: "hidden",
-            }}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            m={"auto"}
+            overflow={"hidden"}
           >
             <Image
               w={{ base: "100%", sm: "370", md: "370" }}
               h={{ base: "auto", sm: "170", md: "170" }}
-              style={{
-                transition: "all .2s ease-in-out",
-                borderRadius: "10px",
-              }}
+              transition={"ll .2s ease-in-out"}
+              borderRadius={"10px"}
               src={isHovered ? project2.gif : project2.image}
               alt={project2.title}
             />
@@ -283,30 +253,15 @@ const cardStyles = () => ({  // for the cards in the projects grid
             flexDirection="row"
           >
             {displaySkills(project2)}
-            {/* <Box
-              borderRadius="md"
-              bg="#FFB612"
-              color="white"
-              px={4}
-              h={7}
-              mr={5}
-            >
-              <p>JavaScript</p>
-            </Box>
-            <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
-              <p>CSS</p>
-            </Box> */}
           </CardFooter>
         </Card>
         <Card {...cardStyles()}>
           <CardHeader
             mb={5}
             fontSize={{ base: "25", sm: "35", md: "35" }}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
+            display={"flex"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
           >
             <Box maxW={"237px"} fontSize={"24px"}>
               {project3.title}
@@ -329,21 +284,17 @@ const cardStyles = () => ({  // for the cards in the projects grid
             maxH={{ base: "auto", sm: "170", md: "170" }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              margin: "auto",
-              overflow: "hidden",
-            }}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            m={"auto"}
+            overflow={"hidden"}
           >
             <Image
               w={{ base: "100%", sm: "370", md: "370" }}
               h={{ base: "auto", sm: "170", md: "170" }}
-              style={{
-                transition: "all .2s ease-in-out",
-                borderRadius: "10px",
-              }}
+              transition={"ll .2s ease-in-out"}
+              borderRadius={"10px"}
               src={isHovered ? project3.gif : project3.image}
               alt={project3.title}
             />
@@ -362,23 +313,10 @@ const cardStyles = () => ({  // for the cards in the projects grid
             overflow={"hidden"}
           >
             {displaySkills(project3)}
-            {/* <Box
-              borderRadius="md"
-              bg="#FFB612"
-              color="white"
-              px={4}
-              h={7}
-              mr={5}
-            >
-              <p>Python</p>
-            </Box>
-            <Box borderRadius="md" bg="#FFB612" color="white" px={4} h={7}>
-              <p>Selenium</p>
-            </Box> */}
           </CardFooter>
         </Card>
       </SimpleGrid>
-    </div>
+    </Box>
   );
 }
 

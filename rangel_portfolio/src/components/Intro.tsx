@@ -1,23 +1,21 @@
-import { Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { Button } from "react-scroll";
 
 export const Intro = () => {
   return (
     <div>
       <div>
-        <div
-          style={{
-            backgroundColor: "#FFB612",
-            borderRadius: "10px",
-            width: "fit-content",
-            height: "fit-content",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "10px",
-            marginLeft: "10px",
-          }}
+        <Box
+          backgroundColor="#FFB612"
+          borderRadius="10px"
+          width="fit-content"
+          height="fit-content"
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+          padding="10px"
+          marginLeft="10px"
         >
           <Text
             bg={["black"]}
@@ -25,9 +23,7 @@ export const Intro = () => {
             fontSize="20px"
             fontWeight="extrabold"
             textAlign={["center", "center"]}
-            style={{
-              transition: "all 0.5s ease-in-out",
-            }}
+            transition={"all 0.5s ease-in-out"}
             _hover={{
               color: "white",
               fontSize: "30px",
@@ -36,7 +32,7 @@ export const Intro = () => {
           >
             Hello!
           </Text>
-        </div>
+        </Box>
 
         <Text
           bgGradient="linear(to-l, white, cyan)"
@@ -44,7 +40,7 @@ export const Intro = () => {
           fontSize="40px"
           fontWeight="extrabold"
           textAlign={["center", "center"]}
-          style={{ transition: "all 0.5s ease-in-out" }}
+          transition={"all 0.5s ease-in-out"}
           _hover={{
             color: "white",
             fontSize: "50px",
@@ -61,7 +57,7 @@ export const Intro = () => {
           fontWeight="extrabold"
           textAlign={["center", "center"]}
           marginBottom={["30px"]}
-          style={{ transition: "all 0.5s ease-in-out" }}
+          transition={"all 0.5s ease-in-out"}
           _hover={{
             color: "white",
             fontSize: "35px",
