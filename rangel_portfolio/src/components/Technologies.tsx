@@ -1,41 +1,69 @@
-import React from "react";
-import {
-  Box,
-  Heading,
-  SimpleGrid,
-  GridItem,
-  Text,
-  Container,
-  Card,
-  Icon,
-} from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Container, Card } from "@chakra-ui/react";
 import { DiJsBadge } from "react-icons/di";
+import LilDude from "./LilDude";
+import TechCard from "./TechCard";
+import { SiPython } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 
 const Technologies = () => {
-  
-  const cardStyles = {
-    p: 3,
-    bg: "gray",
-    m: "8px",
-    boxShadow: "#6FA25D 8px 6px 0px 1px",
-    color: "white",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-  };
+  const iconSize = "30px";
+  const langData = [
+    {
+      name: "JavaScript",
+      icon: <DiJsBadge color="cyan" size={iconSize} />,
+    },
+    {
+      name: "Python",
+      icon: <SiPython color="cyan" size={iconSize} />,
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript color="cyan" size={iconSize} />,
+    },
+    {
+      name: "SQL",
+      icon: <DiJsBadge color="cyan" size={iconSize} />,
+    },
+    {
+      name: "C",
+      icon: <DiJsBadge color="cyan" size={iconSize} />,
+    },
+    {
+      name: "Ruby",
+      icon: <DiJsBadge color="cyan" size={iconSize} />,
+    },
+  ];
+  const frontEndData = [
+    {
+      name: "React.js",
+      icon: <DiJsBadge color="#38a169" size={iconSize} />,
+    },
+    {
+      name: "Chakra UI",
+      icon: <DiJsBadge />,
+    },
+    {
+      name: "Bootstrap",
+      icon: <DiJsBadge />,
+    },
+  ];
+  const backEndData = [
+    {
+      name: "Node.js",
+      icon: <DiJsBadge />,
+    },
+  ];
+  const toolData = [
+    {
+      name: "Git",
+      icon: <DiJsBadge />,
+    },
+  ];
 
   return (
     <Box>
       <Box display={"flex"} flexDir={"column"} alignItems={"center"}>
-        <Box w={"80px"} h={"80px"}>
-          <iframe
-            src="https://giphy.com/embed/jPsraWbk0eJHxp474l"
-            width="80px"
-            height="80px"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </Box>
+        <LilDude />
         <Box
           id="Technologies-header"
           color={"white"}
@@ -53,7 +81,6 @@ const Technologies = () => {
           Technologies
         </Box>
       </Box>
-
       <SimpleGrid
         display={"grid"}
         justifyContent={"center"}
@@ -72,82 +99,10 @@ const Technologies = () => {
         borderRadius={"10px"}
         pb={"50px"}
       >
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>Languages</Heading>
-          </Box>
-          <Card sx={cardStyles}>
-            <Box mx={5}>
-              <DiJsBadge width={"20px"} />
-            </Box>
-            JavaScript
-          </Card>
-          <Card sx={cardStyles}>Python</Card>
-          <Card sx={cardStyles}>TypeScript</Card>
-          <Card sx={cardStyles}>SQL</Card>
-          <Card sx={cardStyles}>C</Card>
-          <Card sx={cardStyles}>Ruby</Card>
-        </Container>
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>FrontEnd</Heading>
-          </Box>
-          <Card sx={cardStyles}>React.js</Card>
-          <Card sx={cardStyles}>Chakra UI</Card>
-          <Card sx={cardStyles}>Bootstrap</Card>
-        </Container>
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>BackEnd</Heading>
-          </Box>
-          <Card sx={cardStyles}>Node.js</Card>
-        </Container>
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>Tools</Heading>
-          </Box>
-          <Card sx={cardStyles}>Git</Card>
-        </Container>
+        <TechCard techCards={langData} header="Languages" />
+        <TechCard techCards={frontEndData} header="Frontend" />
+        <TechCard techCards={backEndData} header="Backend" />
+        <TechCard techCards={toolData} header="Tools" />
       </SimpleGrid>
     </Box>
   );
