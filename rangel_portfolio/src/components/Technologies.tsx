@@ -66,7 +66,7 @@ const Technologies = () => {
 
   return (
     <Box>
-      <Box display={"flex"} flexDir={"column"} alignItems={"center"}>
+      <Box display={"flex"} flexDir={"column"} alignItems={"center"} mt={"80px"}>
         <LilDude />
         <Box
           id="Technologies-header"
