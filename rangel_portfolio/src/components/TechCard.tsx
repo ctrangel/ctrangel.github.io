@@ -13,13 +13,17 @@ interface TechCardListProps {
 
 const cardStyles = {
   p: 3,
-  bg: "gray",
+  bg: "gray.700",
   m: "20px",
-  boxShadow: "8px 6px 0px 1px #6FA25D",
+  boxShadow: "8px 6px 0px 1px #38a169",
   color: "white",
   display: "flex",
   flexDirection: "row",
   justifyContent: "flex-start",
+  transition: "all 0.1s ease-in-out",
+  _hover: {
+    boxShadow: "8px 6px 15px 0px #905da2",
+  },
 };
 
 const generateTechCards = (techCards: TechCardProps[]) => {
