@@ -1,41 +1,73 @@
-import React from "react";
-import {
-  Box,
-  Heading,
-  SimpleGrid,
-  GridItem,
-  Text,
-  Container,
-  Card,
-  Icon,
-} from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Container, Card } from "@chakra-ui/react";
 import { DiJsBadge } from "react-icons/di";
+import LilDude from "./LilDude";
+import TechCard from "./TechCard";
+import { SiPython, SiTypescript, SiMysql, SiC, SiReact, SiBootstrap, SiChakraui, SiGit } from "react-icons/si";
+import { DiRuby, DiNodejsSmall } from "react-icons/di";
 
 const Technologies = () => {
-  
-  const cardStyles = {
-    p: 3,
-    bg: "gray",
-    m: "8px",
-    boxShadow: "#6FA25D 8px 6px 0px 1px",
-    color: "white",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-  };
+  const iconSize = "30px";
+  const langColor = "cyan"
+  const frontEndColor = "#38a169";
+  const backEndColor = "#905da2";
+  const toolColor = "yellow"
+  const langData = [
+    {
+      name: "JavaScript",
+      icon: <DiJsBadge color={langColor} size={iconSize} />,
+    },
+    {
+      name: "Python",
+      icon: <SiPython color={langColor} size={iconSize} />,
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript color={langColor} size={iconSize} />,
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql color={langColor} size={iconSize} />,
+    },
+    {
+      name: "C",
+      icon: <SiC color={langColor} size={iconSize} />,
+    },
+    {
+      name: "Ruby",
+      icon: <DiRuby color={langColor} size={iconSize} />,
+    },
+  ];
+  const frontEndData = [
+    {
+      name: "React.js",
+      icon: <SiReact color={frontEndColor} size={iconSize} />,
+    },
+    {
+      name: "Chakra UI",
+      icon: <SiChakraui color={frontEndColor} size={iconSize} />,
+    },
+    {
+      name: "Bootstrap",
+      icon: <SiBootstrap color={frontEndColor} size={iconSize} />,
+    },
+  ];
+  const backEndData = [
+    {
+      name: "Node.js",
+      icon: <DiNodejsSmall color={backEndColor} size={iconSize} />,
+    },
+  ];
+  const toolData = [
+    {
+      name: "Git",
+      icon: <SiGit color={toolColor} size={iconSize} />,
+    },
+  ];
 
   return (
     <Box>
       <Box display={"flex"} flexDir={"column"} alignItems={"center"}>
-        <Box w={"80px"} h={"80px"}>
-          <iframe
-            src="https://giphy.com/embed/jPsraWbk0eJHxp474l"
-            width="80px"
-            height="80px"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </Box>
+        <LilDude />
         <Box
           id="Technologies-header"
           color={"white"}
@@ -53,7 +85,6 @@ const Technologies = () => {
           Technologies
         </Box>
       </Box>
-
       <SimpleGrid
         display={"grid"}
         justifyContent={"center"}
@@ -65,89 +96,18 @@ const Technologies = () => {
           base: "repeat(1, 1fr)",
           sm: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
-          lg: "repeat(2, 1fr)",
-          xl: "repeat(4, 1fr)",
+          lg: "repeat(3, 1fr)",
+          xl: "repeat(3, 1fr)",
+          "2xl": "repeat(4, 1fr)",
         }}
-        shadow={"0px 8px 32px rgba(0, 0, 0, 0.25)"}
+        shadow={"0px 0px 20px 20px rgba(0, 0, 0, 0.25)"}
         borderRadius={"10px"}
         pb={"50px"}
       >
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>Languages</Heading>
-          </Box>
-          <Card sx={cardStyles}>
-            <Box mx={5}>
-              <DiJsBadge width={"20px"} />
-            </Box>
-            JavaScript
-          </Card>
-          <Card sx={cardStyles}>Python</Card>
-          <Card sx={cardStyles}>TypeScript</Card>
-          <Card sx={cardStyles}>SQL</Card>
-          <Card sx={cardStyles}>C</Card>
-          <Card sx={cardStyles}>Ruby</Card>
-        </Container>
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>FrontEnd</Heading>
-          </Box>
-          <Card sx={cardStyles}>React.js</Card>
-          <Card sx={cardStyles}>Chakra UI</Card>
-          <Card sx={cardStyles}>Bootstrap</Card>
-        </Container>
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>BackEnd</Heading>
-          </Box>
-          <Card sx={cardStyles}>Node.js</Card>
-        </Container>
-        <Container
-          w={"100%"}
-          mx={"auto"}
-          display={"grid"}
-          justifyContent={"start"}
-        >
-          <Box
-            w={"315px"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-            color={"white"}
-          >
-            <Heading>Tools</Heading>
-          </Box>
-          <Card sx={cardStyles}>Git</Card>
-        </Container>
+        <TechCard techCards={langData} header="Languages" />
+        <TechCard techCards={frontEndData} header="Frontend" />
+        <TechCard techCards={backEndData} header="Backend" />
+        <TechCard techCards={toolData} header="Tools" />
       </SimpleGrid>
     </Box>
   );
