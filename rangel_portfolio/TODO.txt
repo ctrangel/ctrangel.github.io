@@ -1,0 +1,10 @@
+
+
+Things to be done and such:
+
+1. Add a blog page
+2. Add a pastel color toggle button to toggle the pastels perhaps
+3. fuck a light dark mode we do not care, we want pastels 
+4. Look into a Language toggler for spanish
+5. of course add some fade in animations on scroll
+6. add something more to the intro page
