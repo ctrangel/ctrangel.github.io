@@ -1,8 +1,9 @@
-import ProjectCard from "./ProjectCard"; 
+import React from "react";
+import ProjectCard from "./ProjectCard"; // Adjust the import path based on your file structure
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import ProjectsHeader from "./ProjectsHeader";
 
-const Projects = () => {
+const ProjectsTest = () => {
   const projects = [
     {
       title: "Scholarship-auto-fill",
@@ -54,12 +55,13 @@ const Projects = () => {
         overflow="hidden"
         px={{ base: "50px", xl: "400px", "2xl": "450px" }}
       >
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+      {projects.map((project, index) => (
+        <ProjectCard key={index} project={project} />
+      ))}
       </SimpleGrid>
     </Box>
+    
   );
 };
 
-export default Projects;
+export default ProjectsTest;
