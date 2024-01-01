@@ -61,7 +61,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     color: "white",
     bgColor: "grey",
     borderRadius: "10px",
-    border: "5px solid cyan",
   };
 
   return (
