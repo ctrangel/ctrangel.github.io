@@ -16,7 +16,7 @@ interface Project {
   githubLink: string;
   imageSrc: string;
   description: string;
-  gifSrc: string; // Assuming you want to add a gif source as well
+  gifSrc: string; 
   skills: string[];
   altText: string;
 }

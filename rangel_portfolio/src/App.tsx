@@ -61,7 +61,6 @@ function App() {
         mt={"100px"}
       >
         <Projects />
-        <ProjectsTest />
       </Box>
       <Box
         id="Technologies-section"
