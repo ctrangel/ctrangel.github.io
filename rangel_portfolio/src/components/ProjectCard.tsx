@@ -9,6 +9,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
+import shakeAnimation from "./ShakeAnimation";
 
 interface Project {
   title: string;
@@ -20,7 +21,6 @@ interface Project {
   altText: string;
 }
 
-
 interface ProjectCardProps {
   project: Project;
 }
@@ -29,7 +29,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const displaySkills = (project: { skills: string | any[] }) => {
-    //typescript kept yelling at me until I added the type, its so mean
     let result = [];
 
     for (let i = 0; i < project.skills.length; i++) {
@@ -47,7 +46,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <p>{project.skills[i]}</p>
         </Box>
       );
-      // console.log(project.skills[i]);
     }
 
     return result;
@@ -58,18 +56,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     mt: { base: 3 },
     w: { base: "300px", sm: "340px", lg: "320px", xl: "390px" },
     maxW: { base: "300px", sm: "340px", lg: "320px", xl: "390" },
-    h: { base: "500px" },
-    maxH: { base: "500px" },
+    h: "auto",
     p: 1,
     color: "white",
     bgColor: "grey",
     borderRadius: "10px",
     border: "5px solid cyan",
-    boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.25)",
   };
 
   return (
     <Card {...cardStyles}>
+      <Box display={"flex"} justifyContent={"flex-end"}>
+        <IconButton
+          aria-label="GitHub"
+          icon={<FaGithub />}
+          size="lg"
+          color="white"
+          bgColor={"#FFB612"}
+          w={"2em"}
+          mb={4}
+          onClick={() => window.open(project.githubLink)}
+          transition={" .5s"}
+          _hover={{
+            bgColor: "#905DA2",
+            animation: `${shakeAnimation} infinite .6s`,
+          }}
+        />
+      </Box>
+
       <CardHeader
         mb={5}
         fontSize={{ base: "25", sm: "35", md: "35" }}
@@ -77,20 +91,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Box maxW={"237px"} fontSize={"24px"}>
+        <Box maxW={"11em"} fontSize={"24px"} overflowWrap={"break-word"}>
           {project.title}
         </Box>
-
-        <IconButton
-          aria-label="GitHub"
-          icon={<FaGithub />}
-          size="lg"
-          colorScheme=""
-          border="2px solid"
-          borderColor="cyan"
-          mb={4}
-          onClick={() => window.open(project.githubLink)}
-        />
       </CardHeader>
       <Box
         p={5}
@@ -122,6 +125,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         alignItems="center"
         justifyContent="flex-start"
         flexDirection="row"
+        flexWrap={"wrap"}
       >
         {displaySkills({ skills: project.skills })}
       </CardFooter>

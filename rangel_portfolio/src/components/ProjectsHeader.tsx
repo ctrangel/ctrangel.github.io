@@ -1,26 +1,10 @@
 import { Box, keyframes } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
+import shakeAnimation from "./ShakeAnimation";
 
 
 
 const ProjectsHeader = () => {
-
-     const animation = keyframes`
-  
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
-`;
-     const shake = `${animation} infinite .5s`;
 
   return (
     <Box
@@ -38,7 +22,11 @@ const ProjectsHeader = () => {
         h={7}
         p={10}
         transition={"all .2s ease-in-out"}
-        _hover={{ bg: "cyan", color: "black", animation: shake }}
+        _hover={{
+          bg: "cyan",
+          color: "black",
+          animation: `${shakeAnimation} infinite .8s`,
+        }}
         fontSize={"40px"}
         display={"flex"}
         alignContent={"center"}

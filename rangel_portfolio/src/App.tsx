@@ -60,7 +60,7 @@ function App() {
         alignItems="center"
         mt={"100px"}
       >
-        {/* <Projects /> */}
+        <Projects />
         <ProjectsTest />
       </Box>
       <Box

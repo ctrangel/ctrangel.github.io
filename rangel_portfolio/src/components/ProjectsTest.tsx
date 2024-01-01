@@ -16,24 +16,24 @@ const ProjectsTest = () => {
       altText: "Scholarship-auto-fill project image",
     },
     {
-      title: "Scholarship-auto-fill",
-      githubLink: "https://github.com/ctrangel/form-auto-fill-public",
-      imageSrc: "/media/big_kurt.jpg",
-      gifSrc: "/media/form_script.gif",
+      title: "Project X",
+      githubLink: "https://github.com/ctrangel/project-x",
+      imageSrc: "/media/project-x.png",
+      gifSrc: "/media/project-x.gif",
       description:
-        "Python script that automatically fills out scholarship applications.",
-      skills: ["Python", "Selenium", "node.js"],
-      altText: "Scholarship-auto-fill project image",
+        "A music-themed website offering headlines, music genre playback, and a playlist-building feature.",
+      skills: ["JavaScript", "CSS"],
+      altText: "Project-x image",
     },
     {
-      title: "Scholarship-auto-fill",
-      githubLink: "https://github.com/ctrangel/form-auto-fill-public",
-      imageSrc: "/media/big_kurt.jpg",
-      gifSrc: "/media/form_script.gif",
+      title: "Limitlesstech.solutions",
+      githubLink: "https://github.com/ctrangel/Limitless-consulting",
+      imageSrc: "/media/limitless-solutions.png",
+      gifSrc: "/media/limitless-solutions.gif",
       description:
-        "Python script that automatically fills out scholarship applications.",
-      skills: ["Python", "Selenium", "node.js"],
-      altText: "Scholarship-auto-fill project image",
+        "A Project to transfer a wix website to an independent site for a business",
+      skills: ["JavaScript", "CSS"],
+      altText: "Limitlesstech.solutions project image",
     },
   ];
 
