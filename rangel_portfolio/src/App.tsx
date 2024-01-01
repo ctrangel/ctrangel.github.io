@@ -3,6 +3,7 @@ import { Intro } from "./components/Intro";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import ProjectsTest from "./components/ProjectsTest";
 import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
 import "./App.css";
@@ -59,7 +60,8 @@ function App() {
         alignItems="center"
         mt={"100px"}
       >
-        <Projects />
+        {/* <Projects /> */}
+        <ProjectsTest />
       </Box>
       <Box
         id="Technologies-section"
