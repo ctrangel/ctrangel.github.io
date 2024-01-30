@@ -2,7 +2,7 @@ import { Box, Heading, SimpleGrid, Container, Card } from "@chakra-ui/react";
 import { DiJsBadge } from "react-icons/di";
 import LilDude from "./LilDude";
 import TechCard from "./TechCard";
-import { SiPython, SiTypescript, SiMysql, SiC, SiReact, SiBootstrap, SiChakraui, SiGit } from "react-icons/si";
+import { SiPython, SiTypescript, SiMysql, SiC, SiReact, SiBootstrap, SiChakraui, SiGit, SiQgis, SiExpress, SiTableau } from "react-icons/si";
 import { DiRuby, DiNodejsSmall } from "react-icons/di";
 
 const Technologies = () => {
@@ -56,12 +56,24 @@ const Technologies = () => {
       name: "Node.js",
       icon: <DiNodejsSmall color={backEndColor} size={iconSize} />,
     },
+    {
+      name: "Express.js",
+      icon: <SiExpress color={backEndColor} size={iconSize} />,
+    }
   ];
   const toolData = [
     {
       name: "Git",
       icon: <SiGit color={toolColor} size={iconSize} />,
     },
+    {
+      name: "QGIS",
+      icon: <SiQgis color={toolColor} size={iconSize} />,
+    },
+    {
+      name: "Tableau",
+      icon: <SiTableau color={toolColor} size={iconSize} />,
+    }
   ];
 
   return (
