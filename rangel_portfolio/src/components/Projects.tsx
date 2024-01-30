@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: "Scholarship-auto-fill",
       githubLink: "https://github.com/ctrangel/form-auto-fill-public",
-      imageSrc: "/media/big_kurt.jpg",
+      imageSrc: "/media/yearn-cow.jpg",
       gifSrc: "/media/form_script.gif",
       description:
         "Python script that automatically fills out scholarship applications.",
