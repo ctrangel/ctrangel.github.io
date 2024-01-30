@@ -58,7 +58,7 @@ const About = () => {
               automation. I'm currently looking for an internship in Software
               Development or Web Development for Summer 2023.
             </Text>
-            <ChakraLink href="/Christian-Rangel-Resume.pdf">
+            <ChakraLink href="/Christian_Rangel_Resume.pdf">
               <Text
                 fontSize={"15px"}
                 textAlign={"left"}
