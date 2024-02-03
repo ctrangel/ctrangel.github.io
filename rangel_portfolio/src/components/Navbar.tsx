@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Image, Link as ChakraLink, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Link as ChakraLink,
+  Text,
+  Button,
+} from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 import Drawer from "./Drawer";
 
@@ -97,15 +104,33 @@ const Navbar = () => {
               margin="0 10px"
               textDecoration="none"
               transition="all 0.2s ease-in-out"
+              borderRadius={"5px"}
               _hover={{
                 bg: "#FFB612",
-                borderRadius: "5px",
                 color: "black",
               }}
             >
               <Text>{link.text}</Text>
             </ChakraLink>
           ))}
+
+          <ChakraLink
+            href="/blog"
+            color="white"
+            fontSize="1.2rem"
+            fontWeight="bold"
+            textDecoration="none"
+            transition="all 0.2s ease-in-out"
+            p={1}
+            margin={"0 10px"}
+            borderRadius={"5px"}
+            _hover={{
+              bg: "#905DA2",
+              color: "white",
+            }}
+          >
+            Rangel.blog
+          </ChakraLink>
         </Flex>
       )}
     </Flex>

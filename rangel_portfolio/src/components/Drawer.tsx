@@ -51,11 +51,7 @@ function NavDrawer() {
                 smooth={true}
                 duration={500}
               >
-                <Button
-                  variant="ghost"
-                  colorScheme="cyan"
-                  m={"10px"}
-                >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
                   Home
                 </Button>
               </ScrollLink>
@@ -65,11 +61,7 @@ function NavDrawer() {
                 smooth={true}
                 duration={500}
               >
-                <Button
-                  variant="ghost"
-                  colorScheme="cyan"
-                  m={"10px"}
-                >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
                   About
                 </Button>
               </ScrollLink>
@@ -79,11 +71,7 @@ function NavDrawer() {
                 smooth={true}
                 duration={500}
               >
-                <Button
-                  variant="ghost"
-                  colorScheme="cyan"
-                  m={"10px"}
-                >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
                   Projects
                 </Button>
               </ScrollLink>
@@ -93,11 +81,7 @@ function NavDrawer() {
                 smooth={true}
                 duration={500}
               >
-                <Button
-                  variant="ghost"
-                  colorScheme="cyan"
-                  m={"10px"}
-                >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
                   Technology
                 </Button>
               </ScrollLink>
@@ -107,14 +91,13 @@ function NavDrawer() {
                 smooth={true}
                 duration={500}
               >
-                <Button
-                  variant="ghost"
-                  colorScheme="cyan"
-                  m={"10px"}
-                >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
                   Contact
                 </Button>
               </ScrollLink>
+              <Button variant="ghost" colorScheme="cyan" m={"10px"}>
+                <Link href="/blog">Blog</Link>
+              </Button>
             </Flex>
           </DrawerBody>
 
