@@ -13,21 +13,21 @@ import { animateScroll as scroll } from "react-scroll";
 import { Link as ChakraLink } from "react-scroll";
 
 const imagePaths = [
-  "public/images/pic1.jpg",
-  "public/images/pic2.jpg",
-  "public/images/pic3.jpg",
-  "public/images/pic4.jpg",
-  "public/images/pic5.jpg",
-  "public/images/pic6.jpg",
-  "public/images/pic7.jpg",
-  "public/images/pic8.jpg",
-  "public/images/pic9.jpg",
-  "public/images/pic10.jpg",
-  "public/images/pic11.jpg",
-  "public/images/pic12.jpg",
-  "public/images/pic13.jpg",
-  "public/images/pic14.jpg",
-  "public/images/pic15.jpg",
+  "/images/pic1.jpg",
+  "/images/pic2.jpg",
+  "/images/pic3.jpg",
+  "/images/pic4.jpg",
+  "/images/pic5.jpg",
+  "/images/pic6.jpg",
+  "/images/pic7.jpg",
+  "/images/pic8.jpg",
+  "/images/pic9.jpg",
+  "/images/pic10.jpg",
+  "/images/pic11.jpg",
+  "/images/pic12.jpg",
+  "/images/pic13.jpg",
+  "/images/pic14.jpg",
+  "/images/pic15.jpg",
 ];
 
 const Photography: React.FC = () => {
