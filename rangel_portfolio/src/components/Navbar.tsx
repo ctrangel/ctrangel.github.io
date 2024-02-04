@@ -114,7 +114,7 @@ const Navbar = () => {
             </ChakraLink>
           ))}
 
-          <ChakraLink
+          {/* <ChakraLink
             href="/blog"
             color="white"
             fontSize="1.2rem"
@@ -130,7 +130,7 @@ const Navbar = () => {
             }}
           >
             Rangel.blog
-          </ChakraLink>
+          </ChakraLink> */}
         </Flex>
       )}
     </Flex>
