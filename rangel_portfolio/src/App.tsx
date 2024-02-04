@@ -42,12 +42,12 @@ function App() {
       <Box
         as={"section"}
         id="Home-section"
-        h="115vh"
+        h="50em"
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        mt="-20vh"
+        mt="-12em"
         position="relative"
       >
         <Intro />

@@ -1,5 +1,8 @@
 import { Box, Text } from "@chakra-ui/react";
 import { Button } from "react-scroll";
+import React from "react";
+import "../App.css";
+import Photography from "./Photography";
 
 export const Intro = () => {
   return (
@@ -64,7 +67,7 @@ export const Intro = () => {
             fontWeight: "extrabold",
           }}
         >
-          A student in software development
+          Nice to meet you!
         </Text>
       </div>
     </div>
