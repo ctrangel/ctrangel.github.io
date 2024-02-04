@@ -96,7 +96,7 @@ function NavDrawer() {
                 </Button>
               </ScrollLink>
               <Button variant="ghost" colorScheme="cyan" m={"10px"}>
-                <Link href="/blog">Blog</Link>
+                <Link href="/blog">Rangel.blog</Link>
               </Button>
             </Flex>
           </DrawerBody>

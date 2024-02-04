@@ -19,12 +19,7 @@ const breakpoints = {
   "2xl": "1580px",
 };
 
-const posts = [
-  { id: 1, title: "Introduction to TypeScript", content: "..." },
-  { id: 2, title: "Building React Apps with Hooks", content: "..." },
-  { id: 3, title: "Simple Blog Page Component", content: "..." },
-  // Add more posts as needed
-];
+const posts = "./posts/posts.json";
 
 const theme = extendTheme({ breakpoints });
 
@@ -34,21 +29,7 @@ function App() {
       break;
     }
     case "/blog": {
-      return (
-        <Box
-          id="Blog-section"
-          h={"auto"}
-          color="white"
-          backgroundColor="#2d3333"
-          display="flex"
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="center"
-          mt={"100px"}
-        >
-          <BlogPage posts={posts} />
-        </Box>
-      );
+      return <BlogPage />;
     }
     default: {
       break;

@@ -5,7 +5,7 @@ import { Box, Flex, Link, Spacer } from "@chakra-ui/react";
 
 const BlogNav: React.FC = () => {
   return (
-    <Box as="nav" p={4} bg="teal.500" color="white">
+    <Box as="nav" p={4} bg="#905DA2" color="white" w={"100%"}>
       <Flex>
         <Link href="/">Home</Link>
         <Spacer />

@@ -5,51 +5,36 @@ import Navbar from "../components/Navbar";
 import { Box, Heading, VStack } from "@chakra-ui/react";
 import BlogNav from "../components/BlogNav";
 
-type BlogPost = {
-  id: number;
-  title: string;
-  content: string;
-};
-
-type BlogPageProps = {
-  posts: BlogPost[];
-};
-
-const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-
-  const handlePostClick = (post: BlogPost) => {
-    setSelectedPost(post);
-  };
-
+const BlogPage = () => {
   return (
-    <Box>
+    <Box
+      id="Blog-section"
+      h={"100em"}
+      color="black"
+      backgroundColor="white"
+      display="flex"
+      flexDirection="column"
+      justifyContent="flex-start"
+      alignItems="center"
+      w={"100%"}
+    >
       <BlogNav />
       <VStack align="center" spacing={4}>
-        <Heading size="xl">Blog Page</Heading>
-
-        <VStack spacing={4} align="stretch" w="100%">
-          {posts.map((post) => (
-            <Box
-              key={post.id}
-              p={4}
-              onClick={() => handlePostClick(post)}
-              borderWidth="1px"
-              borderRadius="lg"
-              cursor="pointer"
-              _hover={{ borderColor: "gray.300" }}
-            >
-              <Heading size="md">{post.title}</Heading>
-            </Box>
-          ))}
-        </VStack>
-
-        {selectedPost && (
-          <VStack spacing={4} align="stretch" w="100%">
-            <Heading size="lg">{selectedPost.title}</Heading>
-            <Box>{selectedPost.content}</Box>
-          </VStack>
-        )}
+        <Box
+          mt={40}
+          mb={20}
+          w={"100%"}
+          height={"10em"}
+          borderLeft={"1px solid"}
+          display={"flex"}
+          justifyContent={"left"}
+          alignItems={"center"}
+          borderColor={"#905DA2"}
+        >
+          <Heading size="xl" m={2}>
+            Rangel Blog
+          </Heading>
+        </Box>
       </VStack>
     </Box>
   );
