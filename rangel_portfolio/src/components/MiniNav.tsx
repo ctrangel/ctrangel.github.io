@@ -1,11 +1,20 @@
 import React from "react";
-import { Box, Button, color } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 interface MiniNavbarProps {
   setActiveContent: (contentName: string) => void;
+  toggleContentVisibility: () => void;
+  isContentVisible: boolean;
+  activeContent: string | null; // Allow activeContent to be string or null
 }
 
-const MiniNavbar: React.FC<MiniNavbarProps> = ({ setActiveContent }) => {
+
+const MiniNavbar: React.FC<MiniNavbarProps> = ({
+  setActiveContent,
+  toggleContentVisibility,
+  isContentVisible,
+  activeContent, // Use this to determine the active tab
+}) => {
   return (
     <Box
       display="flex"
@@ -18,29 +27,28 @@ const MiniNavbar: React.FC<MiniNavbarProps> = ({ setActiveContent }) => {
       mt={10}
     >
       <Button
-        color={"white"}
+        color="white"
         variant="ghost"
-        onClick={() => setActiveContent("blog")}
+        onClick={toggleContentVisibility}
         _hover={{ color: "black", backgroundColor: "white" }}
       >
-        Blog
+        {isContentVisible ? "Hide Content" : "Show Content"}
       </Button>
-      <Button
-        color={"white"}
-        variant="ghost"
-        onClick={() => setActiveContent("coursework")}
-        _hover={{ color: "black", backgroundColor: "white" }}
-      >
-        Course Work
-      </Button>
-      <Button
-        color={"white"}
-        variant="ghost"
-        onClick={() => setActiveContent("spotify")}
-        _hover={{ color: "black", backgroundColor: "white" }}
-      >
-        Spotify
-      </Button>
+      {["blog", "coursework", "spotify"].map((content) => (
+        <Button
+          key={content}
+          color={activeContent === content ? "black" : "white"} // Change text color based on active state
+          backgroundColor={activeContent === content ? "white" : "transparent"} // Ensure background is white for active tab
+          variant="ghost"
+          onClick={() => {
+            setActiveContent(content);
+            if (!isContentVisible) toggleContentVisibility();
+          }}
+          _hover={{ color: "black", backgroundColor: "white" }}
+        >
+          {content.charAt(0).toUpperCase() + content.slice(1)}
+        </Button>
+      ))}
     </Box>
   );
 };
