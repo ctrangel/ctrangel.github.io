@@ -8,7 +8,7 @@ import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
 import "./App.css";
 import { extendTheme } from "@chakra-ui/react";
-import BlogPage from "./pages/Blog";
+import ContentSection from "./components/ContentSection";
 
 const breakpoints = {
   base: "0px",
@@ -24,17 +24,6 @@ const posts = "./posts/posts.json";
 const theme = extendTheme({ breakpoints });
 
 function App() {
-  switch (window.location.pathname) {
-    case "/": {
-      break;
-    }
-    case "/blog": {
-      return <BlogPage />;
-    }
-    default: {
-      break;
-    }
-  }
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
@@ -62,6 +51,17 @@ function App() {
         alignItems="center"
       >
         <About />
+      </Box>
+      <Box
+        id="Content-section"
+        h="auto"
+        backgroundColor="#2d3333"
+        display="flex"
+        flexDirection="column"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <ContentSection />
       </Box>
       <Box
         id="Projects-section"
