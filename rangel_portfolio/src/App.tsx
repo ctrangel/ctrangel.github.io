@@ -27,7 +27,6 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
-
       <Box
         as={"section"}
         id="Home-section"

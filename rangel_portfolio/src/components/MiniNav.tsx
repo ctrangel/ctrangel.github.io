@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Button } from '@chakra-ui/react';
+import React from "react";
+import { Box, Button, color } from "@chakra-ui/react";
 
 interface MiniNavbarProps {
   setActiveContent: (contentName: string) => void;
@@ -7,14 +7,38 @@ interface MiniNavbarProps {
 
 const MiniNavbar: React.FC<MiniNavbarProps> = ({ setActiveContent }) => {
   return (
-    <Box display="flex" gap="4" p="4" alignItems="center" justifyContent="center" backgroundColor="#2D3748" borderRadius="md">
-      <Button colorScheme="teal" variant="ghost" onClick={() => setActiveContent('blog')}>
+    <Box
+      display="flex"
+      gap="4"
+      p="4"
+      alignItems="center"
+      justifyContent="center"
+      backgroundColor="#905da2"
+      borderRadius="md"
+      mt={10}
+    >
+      <Button
+        color={"white"}
+        variant="ghost"
+        onClick={() => setActiveContent("blog")}
+        _hover={{ color: "black", backgroundColor: "white" }}
+      >
         Blog
       </Button>
-      <Button colorScheme="teal" variant="ghost" onClick={() => setActiveContent('coursework')}>
+      <Button
+        color={"white"}
+        variant="ghost"
+        onClick={() => setActiveContent("coursework")}
+        _hover={{ color: "black", backgroundColor: "white" }}
+      >
         Course Work
       </Button>
-      <Button colorScheme="teal" variant="ghost" onClick={() => setActiveContent('spotify')}>
+      <Button
+        color={"white"}
+        variant="ghost"
+        onClick={() => setActiveContent("spotify")}
+        _hover={{ color: "black", backgroundColor: "white" }}
+      >
         Spotify
       </Button>
     </Box>

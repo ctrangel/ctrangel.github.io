@@ -4,7 +4,8 @@ import { Box } from '@chakra-ui/react';
 
 const SpotifyContent: React.FC = () => {
   // Replace `spotifyURI` with your actual Spotify embed URI
-  const spotifyURI = "https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3";
+  const spotifyURI =
+    "https://open.spotify.com/embed/playlist/0Z4njgoYwJk9mMGWQMTpL8?utm_source=generator";
   
   return (
     <Box p={5} className="spotify-embed">
