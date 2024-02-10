@@ -4,6 +4,7 @@ import MiniNavbar from "./MiniNav"; // Ensure the path matches your project stru
 import BlogContent from "./BlogContent";
 import CourseWorkContent from "./CourseWorkContent";
 import SpotifyEmbedContent from "./SpotifyContent";
+import CourseWorkNav from "./CourseWorkNav";
 
 const ContentSection: React.FC = () => {
   const [activeContent, setActiveContent] = useState<string | null>(null); // Allow null to indicate no content selected
@@ -18,7 +19,13 @@ const ContentSection: React.FC = () => {
   };
 
   return (
-    <Box>
+    <Box
+      display={"flex"}
+      flexDir={"column"}
+      alignContent={"center"}
+      justifyContent={"center"}
+      alignItems={"center"}
+    >
       <MiniNavbar
         setActiveContent={setActiveContent}
         toggleContentVisibility={toggleContentVisibility}
@@ -28,7 +35,14 @@ const ContentSection: React.FC = () => {
       {isContentVisible && activeContent && (
         <>
           {activeContent === "blog" && <BlogContent />}
-          {activeContent === "coursework" && <CourseWorkContent />}
+          {activeContent === "coursework" && (
+            <Box
+              maxW={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
+              w={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
+            >
+              <CourseWorkNav />
+            </Box>
+          )}
           {activeContent === "spotify" && <SpotifyEmbedContent />}
         </>
       )}

@@ -66,6 +66,16 @@ function NavDrawer() {
                 </Button>
               </ScrollLink>
               <ScrollLink
+                to="Content-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
+                  Other
+                </Button>
+              </ScrollLink>
+              <ScrollLink
                 to="Projects-section"
                 spy={true}
                 smooth={true}
@@ -95,6 +105,7 @@ function NavDrawer() {
                   Contact
                 </Button>
               </ScrollLink>
+
               {/* <Button variant="ghost" colorScheme="cyan" m={"10px"}>
                 <Link href="/blog">Rangel.blog</Link>
               </Button> */}

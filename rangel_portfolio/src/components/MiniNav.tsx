@@ -18,19 +18,21 @@ const MiniNavbar: React.FC<MiniNavbarProps> = ({
   return (
     <Box
       display="flex"
-      gap="4"
-      p="4"
+      gap="3"
+      p={2}
       alignItems="center"
       justifyContent="center"
       backgroundColor="#905da2"
       borderRadius="md"
-      mt={10}
+      mt={"8em"}
+      w={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
     >
       <Button
         color="white"
         variant="ghost"
         onClick={toggleContentVisibility}
-        _hover={{ color: "black", backgroundColor: "white" }}
+        
+        _hover={{ color: "black" }}
       >
         {isContentVisible ? "Hide Content" : "Show Content"}
       </Button>
@@ -40,6 +42,7 @@ const MiniNavbar: React.FC<MiniNavbarProps> = ({
           color={activeContent === content ? "black" : "white"} // Change text color based on active state
           backgroundColor={activeContent === content ? "white" : "transparent"} // Ensure background is white for active tab
           variant="ghost"
+          
           onClick={() => {
             setActiveContent(content);
             if (!isContentVisible) toggleContentVisibility();
