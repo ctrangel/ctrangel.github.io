@@ -5,14 +5,14 @@ import ProjectsHeader from "./ProjectsHeader";
 const Projects = () => {
   const projects = [
     {
-      title: "Scholarship-auto-fill",
-      githubLink: "https://github.com/ctrangel/form-auto-fill-public",
+      title: "JarWorld API",
+      githubLink: "https://github.com/ctrangel/API",
       imageSrc: "/media/yearn-cow.jpg",
-      gifSrc: "/media/form_script.gif",
+      gifSrc: "./media/api.gif",
       description:
-        "Python script that automatically fills out scholarship applications.",
-      skills: ["Python", "Selenium", "node.js"],
-      altText: "Scholarship-auto-fill project image",
+        "An API that allows users to create, read, update, and delete inventory from a database.",
+      skills: ["JavaScript", "Express.js", "node.js", "postgreSQL"],
+      altText: "JarWorld API image",
     },
     {
       title: "Project X",

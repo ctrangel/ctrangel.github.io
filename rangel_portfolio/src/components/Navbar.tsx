@@ -39,6 +39,7 @@ const Navbar = () => {
 
   const scrollLinks = [
     { id: "about", text: "About", to: "About-section" },
+    { id: "photos", text: "Photos", to: "showcase", offset: "-60"},
     { id: "Other", text: "Other", to: "Content-section" },
     { id: "projects", text: "Projects", to: "Projects-section" },
     { id: "technologies", text: "Technologies", to: "Technologies-section" },
@@ -97,6 +98,7 @@ const Navbar = () => {
               spy={true}
               smooth={true}
               duration={500}
+              offset={parseInt(link.offset || "0")}
               onClick={closeNavbarOnDesktop}
               px={2}
               color="white"

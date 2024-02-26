@@ -66,6 +66,17 @@ function NavDrawer() {
                 </Button>
               </ScrollLink>
               <ScrollLink
+                to="showcase"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-60}
+              >
+                <Button variant="ghost" colorScheme="cyan" m={"10px"}>
+                  Photos
+                </Button>
+              </ScrollLink>
+              <ScrollLink
                 to="Content-section"
                 spy={true}
                 smooth={true}
