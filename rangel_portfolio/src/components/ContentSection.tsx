@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import { Box } from "@chakra-ui/react";
-import MiniNavbar from "./MiniNav"; // Ensure the path matches your project structure
-import BlogContent from "./AcademicWork";
-import CourseWorkContent from "./CourseWorkContent";
+import MiniNavbar from "./MiniNav"; 
+import AcademicWork from "./AcademicWork";
 import SpotifyEmbedContent from "./SpotifyContent";
 import CourseWorkNav from "./CourseWorkNav";
-import AcademicWork from "./AcademicWork";
 
 const ContentSection: React.FC = () => {
-  const [activeContent, setActiveContent] = useState<string | null>(null); // Allow null to indicate no content selected
-  const [isContentVisible, setIsContentVisible] = useState<boolean>(false); // State to control visibility of content area
+ 
+  const [activeContent, setActiveContent] = useState<string | null>(
+    "Academic Work"
+  );
+  const [isContentVisible, setIsContentVisible] = useState<boolean>(false); 
 
   const toggleContentVisibility = () => {
     setIsContentVisible(!isContentVisible);
-    // Set default content to "blog" if opening and no content is currently active
-    if (!isContentVisible && !activeContent) {
-      setActiveContent("blog");
-    }
   };
 
   return (

@@ -64,7 +64,7 @@ const About = () => {
               to check out my Resume below and my photography section. If you
               have any inquiries feel free to contact me. Thanks for visiting!
             </Text>
-            <ChakraLink href="/Christian_Rangel_Resume.pdf">
+            <ChakraLink href="/Christian_Rangel_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Text
                 fontSize={"15px"}
                 textAlign={"left"}
