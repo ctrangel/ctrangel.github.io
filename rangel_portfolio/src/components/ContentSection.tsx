@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Box } from "@chakra-ui/react";
 import MiniNavbar from "./MiniNav"; // Ensure the path matches your project structure
-import BlogContent from "./BlogContent";
+import BlogContent from "./AcademicWork";
 import CourseWorkContent from "./CourseWorkContent";
 import SpotifyEmbedContent from "./SpotifyContent";
 import CourseWorkNav from "./CourseWorkNav";
+import AcademicWork from "./AcademicWork";
 
 const ContentSection: React.FC = () => {
   const [activeContent, setActiveContent] = useState<string | null>(null); // Allow null to indicate no content selected
@@ -34,7 +35,7 @@ const ContentSection: React.FC = () => {
       />
       {isContentVisible && activeContent && (
         <>
-          {activeContent === "blog" && <BlogContent />}
+          {activeContent === "Academic Work" && <AcademicWork />}
           {activeContent === "coursework" && (
             <Box
               maxW={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
