@@ -1,20 +1,32 @@
 import React from "react";
-import { Box, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  useBreakpointValue,
+  IconButton,
+} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 interface MiniNavbarProps {
   setActiveContent: (contentName: string) => void;
   toggleContentVisibility: () => void;
   isContentVisible: boolean;
-  activeContent: string | null; // Allow activeContent to be string or null
+  activeContent: string | null;
 }
-
 
 const MiniNavbar: React.FC<MiniNavbarProps> = ({
   setActiveContent,
   toggleContentVisibility,
   isContentVisible,
-  activeContent, // Use this to determine the active tab
+  activeContent,
 }) => {
+  // Determine if the screen is smaller than 768px
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
   return (
     <Box
       display="flex"
@@ -31,27 +43,53 @@ const MiniNavbar: React.FC<MiniNavbarProps> = ({
         color="white"
         variant="ghost"
         onClick={toggleContentVisibility}
-        
         _hover={{ color: "black" }}
       >
         {isContentVisible ? "Hide Content" : "Show Content"}
       </Button>
-      {["blog", "coursework", "spotify"].map((content) => (
-        <Button
-          key={content}
-          color={activeContent === content ? "black" : "white"} // Change text color based on active state
-          backgroundColor={activeContent === content ? "white" : "transparent"} // Ensure background is white for active tab
-          variant="ghost"
-          
-          onClick={() => {
-            setActiveContent(content);
-            if (!isContentVisible) toggleContentVisibility();
-          }}
-          _hover={{ color: "black", backgroundColor: "white" }}
-        >
-          {content.charAt(0).toUpperCase() + content.slice(1)}
-        </Button>
-      ))}
+
+      {isMobile ? (
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            icon={<HamburgerIcon />}
+            variant="outline"
+            color="white"
+            _hover={{ color: "black", backgroundColor: "white" }}
+          />
+          <MenuList>
+            {["Academic Work", "coursework", "spotify"].map((content) => (
+              <MenuItem
+                key={content}
+                onClick={() => {
+                  setActiveContent(content);
+                  if (!isContentVisible) toggleContentVisibility();
+                }}
+              >
+                {content.charAt(0).toUpperCase() + content.slice(1)}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
+      ) : (
+        ["Academic Work", "coursework", "spotify"].map((content) => (
+          <Button
+            key={content}
+            color={activeContent === content ? "black" : "white"}
+            backgroundColor={
+              activeContent === content ? "white" : "transparent"
+            }
+            variant="ghost"
+            onClick={() => {
+              setActiveContent(content);
+              if (!isContentVisible) toggleContentVisibility();
+            }}
+            _hover={{ color: "black", backgroundColor: "white" }}
+          >
+            {content.charAt(0).toUpperCase() + content.slice(1)}
+          </Button>
+        ))
+      )}
     </Box>
   );
 };
