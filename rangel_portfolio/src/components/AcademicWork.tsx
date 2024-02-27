@@ -21,13 +21,13 @@ const AcademicWork: React.FC = () => {
     },
     {
       id: 2,
-      title: "Work Title 2",
-      author: "Author Name 2",
-      date: "2022-02-02",
-      highlights: ["Highlight 1", "Highlight 2", "Highlight 3"],
-      pdfUrl: "https://example.com/yourpdf2.pdf", 
+      title: "The Privatization of Government Functions",
+      author: "Christian Rangel",
+      date: "10/28/23",
+      course: "American National Government",
+      highlights: ["Paper", "Analysis", "Report"],
+      pdfUrl: "/posts/final_essay.pdf",
     },
-
   ];
 
   return (
