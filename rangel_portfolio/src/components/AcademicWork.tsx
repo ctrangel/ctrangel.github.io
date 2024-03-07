@@ -28,6 +28,16 @@ const AcademicWork: React.FC = () => {
       highlights: ["Paper", "Analysis", "Report"],
       pdfUrl: "/posts/final_essay.pdf",
     },
+    {
+      id: 3,
+      title:
+        "Reading/Response: “Everything Is Far From Here” by Cristina Henríquez",
+      author: "Christian Rangel",
+      date: "3/06/24",
+      course: "The Art of the Short Story",
+      highlights: ["Paper", "Analysis", "Reading"],
+      pdfUrl: "/posts/short-story1.pdf"
+    },
   ];
 
   return (
