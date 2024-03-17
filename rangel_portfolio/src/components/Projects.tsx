@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard"; 
+import ProjectCard from "./ProjectCard";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import ProjectsHeader from "./ProjectsHeader";
 
@@ -7,12 +7,23 @@ const Projects = () => {
     {
       title: "JarWorld API",
       githubLink: "https://github.com/ctrangel/API",
+      link: "https://ctrangel.it.pointpark.edu/",
       imageSrc: "/media/yearn-cow.jpg",
-      gifSrc: "./media/api.gif",
+      gifSrc: "./media/JarGif.gif",
       description:
-        "An API that allows users to create, read, update, and delete inventory from a database.",
+        "An inventory management system with login, and data manipulation features making calls to a RESTful API.",
       skills: ["JavaScript", "Express.js", "node.js", "postgreSQL"],
       altText: "JarWorld API image",
+    },
+    {
+      title: "PTI Comp Page",
+      githubLink: "https://github.com/ctrangel/webdesign-comp-page",
+      link: "https://ctrangel.it.pointpark.edu/info-site/",
+      imageSrc: "pti-comp.png",
+      description:
+        "An Informational website for my club's web design competition",
+      skills: ["webdesign", "CSS"],
+      altText: "PTI Webdesign Competition image",
     },
     {
       title: "Project X",
@@ -27,6 +38,7 @@ const Projects = () => {
     {
       title: "Limitlesstech.solutions",
       githubLink: "https://github.com/ctrangel/Limitless-consulting",
+      link: "https://limitlesstech.solutions/pages/home.html",
       imageSrc: "/media/limitless-solutions.png",
       gifSrc: "/media/limitless-solutions.gif",
       description:

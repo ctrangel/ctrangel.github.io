@@ -9,14 +9,16 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
+import { FaLink} from "react-icons/fa";
 import shakeAnimation from "./ShakeAnimation";
 
 interface Project {
   title: string;
   githubLink: string;
+  link?: string;
   imageSrc: string;
   description: string;
-  gifSrc: string; 
+  gifSrc?: string; 
   skills: string[];
   altText: string;
 }
@@ -67,6 +69,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <Card {...cardStyles}>
       <Box display={"flex"} justifyContent={"flex-end"}>
         <IconButton
+          aria-label="Link"
+          icon={<FaLink />}
+          size="lg"
+          color="white"
+          bgColor={"#FFB612"}
+          w={"2em"}
+          mb={4}
+          mr={2}
+          onClick={() => window.open(project.link)}
+          transition={" .5s"}
+          _hover={{
+            bgColor: "#905DA2",
+            animation: `${shakeAnimation} infinite .6s`,
+          }}
+        />
+        <IconButton
           aria-label="GitHub"
           icon={<FaGithub />}
           size="lg"
@@ -111,7 +129,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           h={{ base: "auto", sm: "170", md: "170" }}
           transition={"ll .2s ease-in-out"}
           borderRadius={"10px"}
-          src={isHovered ? project.gifSrc : project.imageSrc}
+          src={(isHovered && project.gifSrc) ? project.gifSrc : project.imageSrc}
           alt={project.altText}
         />
       </Box>
