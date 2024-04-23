@@ -109,6 +109,66 @@ const CourseWorkContent: React.FC<CourseWorkContentProps> = ({
         },
       ],
     },
+    {
+      term: "Summer 24",
+      classes: [
+        {
+          name: "Organizational Behavior with Topics",
+          details:
+            "Examines the role of individual and group behavior within work organizations",
+        },
+        {
+          name: "Human Resources Management",
+          details: "Overview of HR functions.",
+        },
+        {
+          name: "Principles of Marketing and Sales",
+          details:
+            "This foundational marketing and sales course introduces students to the principles and practices of marketing and sales",
+        },
+        {
+          name: "Financial Accounting",
+          details: "Introduction to financial accounting concepts.",
+        },
+        {
+          name: "Principles of Macroeconomics",
+          details: "Introduction to macroeconomic principles.",
+        },
+      ],
+    },
+    {
+      term: "Fall 24",
+      classes: [
+        {
+          name: "Management Accounting for Decision",
+          details:
+            "Introduction to management accounting concepts and decision-making.",
+        },
+        {
+          name: "NoSQL Databases",
+          details: "Exploring non-relational databases and their applications.",
+        },
+        {
+          name: "Microeconomics",
+          details:
+            "foundational principles for economic transactions and determination of prices in the marketplace",
+        },
+        {
+          name: "Creative Writing",
+          details:
+            "Students will write in multiple genres, including but not limited to poetry, fiction, and creative nonfiction, among others",
+        },
+        {
+          name: "Fiction Workshop 1",
+          details:
+            "Students will write and critique original fiction in a workshop setting.",
+        },
+        { 
+          name: "Public Administration",
+          details: "Introduction to public administration and policy-making.",
+        }
+      ],
+    },
   ];
 
   const termData = terms.find((term) => term.term === selectedTerm);

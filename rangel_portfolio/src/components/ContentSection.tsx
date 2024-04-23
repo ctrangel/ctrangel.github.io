@@ -4,6 +4,7 @@ import MiniNavbar from "./MiniNav";
 import AcademicWork from "./AcademicWork";
 import SpotifyEmbedContent from "./SpotifyContent";
 import CourseWorkNav from "./CourseWorkNav";
+import CreativeWriting from "./CreativeWriting";
 
 const ContentSection: React.FC = () => {
  
@@ -33,7 +34,7 @@ const ContentSection: React.FC = () => {
       {isContentVisible && activeContent && (
         <>
           {activeContent === "Academic Work" && <AcademicWork />}
-          {activeContent === "coursework" && (
+          {activeContent === "Coursework" && (
             <Box
               maxW={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
               w={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
@@ -41,7 +42,15 @@ const ContentSection: React.FC = () => {
               <CourseWorkNav />
             </Box>
           )}
-          {activeContent === "spotify" && <SpotifyEmbedContent />}
+          {activeContent === "Creative Writing" && (
+            <Box
+              maxW={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
+              w={{ base: "100%", sm: "22em", md: "40em", lg: "55em" }}
+            >
+              <CreativeWriting />
+            </Box>
+          )}
+          {activeContent === "Spotify" && <SpotifyEmbedContent />}
         </>
       )}
     </Box>

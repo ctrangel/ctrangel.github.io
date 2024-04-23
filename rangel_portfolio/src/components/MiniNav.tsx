@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -8,6 +8,15 @@ import {
   MenuList,
   useBreakpointValue,
   IconButton,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Input,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -24,8 +33,32 @@ const MiniNavbar: React.FC<MiniNavbarProps> = ({
   isContentVisible,
   activeContent,
 }) => {
-  // Determine if the screen is smaller than 768px
-  const isMobile = useBreakpointValue({ base: true, md: false });
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [password, setPassword] = useState("");
+  const [accessGranted, setAccessGranted] = useState(false);
+
+  const checkPassword = () => {
+    if (password === "0301") {
+      
+      setAccessGranted(true);
+      setActiveContent("Creative Writing");
+      if (!isContentVisible) toggleContentVisibility();
+      onClose();
+    } else {
+      alert("Womp Womp, try again");
+    }
+  };
+
+  const handleContentClick = (content: string) => {
+    if (content === "Creative Writing" && !accessGranted) {
+      onOpen();
+    } else {
+      setActiveContent(content);
+      if (!isContentVisible) toggleContentVisibility();
+    }
+  };
+
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
     <Box
@@ -58,38 +91,61 @@ const MiniNavbar: React.FC<MiniNavbarProps> = ({
             _hover={{ color: "black", backgroundColor: "white" }}
           />
           <MenuList>
-            {["Academic Work", "coursework", "spotify"].map((content) => (
-              <MenuItem
-                key={content}
-                onClick={() => {
-                  setActiveContent(content);
-                  if (!isContentVisible) toggleContentVisibility();
-                }}
-              >
-                {content.charAt(0).toUpperCase() + content.slice(1)}
-              </MenuItem>
-            ))}
+            {["Academic Work", "Coursework", "Creative Writing", "Spotify"].map(
+              (content) => (
+                <MenuItem
+                  key={content}
+                  onClick={() => handleContentClick(content)}
+                >
+                  {content.charAt(0).toUpperCase() + content.slice(1)}
+                </MenuItem>
+              )
+            )}
           </MenuList>
         </Menu>
       ) : (
-        ["Academic Work", "coursework", "spotify"].map((content) => (
-          <Button
-            key={content}
-            color={activeContent === content ? "black" : "white"}
-            backgroundColor={
-              activeContent === content ? "white" : "transparent"
-            }
-            variant="ghost"
-            onClick={() => {
-              setActiveContent(content);
-              if (!isContentVisible) toggleContentVisibility();
-            }}
-            _hover={{ color: "black", backgroundColor: "white" }}
-          >
-            {content.charAt(0).toUpperCase() + content.slice(1)}
-          </Button>
-        ))
+        ["Academic Work", "Coursework", "Creative Writing", "Spotify"].map(
+          (content) => (
+            <Button
+              key={content}
+              color={activeContent === content ? "black" : "white"}
+              backgroundColor={
+                activeContent === content ? "white" : "transparent"
+              }
+              variant="ghost"
+              onClick={() => handleContentClick(content)}
+              _hover={{ color: "black", backgroundColor: "white" }}
+            >
+              {content.charAt(0).toUpperCase() + content.slice(1)}
+            </Button>
+          )
+        )
       )}
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Enter passcode to gain entry to creative works</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Input
+              placeholder="Enter Passcode"
+              maxLength={4}
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="purple" mr={3} onClick={checkPassword}>
+              Submit
+            </Button>
+            <Button variant="ghost" onClick={onClose}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };

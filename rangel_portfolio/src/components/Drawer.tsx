@@ -83,7 +83,7 @@ function NavDrawer() {
                 duration={500}
               >
                 <Button variant="ghost" colorScheme="cyan" m={"10px"}>
-                  Other
+                  Academics
                 </Button>
               </ScrollLink>
               <ScrollLink

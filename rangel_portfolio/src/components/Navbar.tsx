@@ -40,7 +40,7 @@ const Navbar = () => {
   const scrollLinks = [
     { id: "about", text: "About", to: "About-section" },
     { id: "photos", text: "Photos", to: "showcase", offset: "-60"},
-    { id: "Other", text: "Other", to: "Content-section" },
+    { id: "academics", text: "Academics", to: "Content-section" },
     { id: "projects", text: "Projects", to: "Projects-section" },
     { id: "technologies", text: "Technologies", to: "Technologies-section" },
     { id: "contact", text: "Contact", to: "Contact-section" },
