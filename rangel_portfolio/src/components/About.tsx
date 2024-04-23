@@ -48,8 +48,7 @@ const About = () => {
               student major at Point Park University with an interest in web
               development and Design. With my creative ideas and skill set, I
               enjoy creating applications that are visually appealing and
-              engaging. I am also very interested in transportation planning and
-              the built environment.
+              engaging. 
               <br></br>
               <br></br>
               I'm currently learning React, TypeScript, Node.JS and Chakra UI
