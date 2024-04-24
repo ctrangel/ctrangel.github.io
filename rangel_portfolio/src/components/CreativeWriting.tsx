@@ -18,7 +18,8 @@ const CreativeWriting: React.FC = () => {
       date: "4/22/24",
       course: "Art of the Short Story",
       highlights: ["Short Story", "Fiction"],
-      pdfUrl: "/posts/ChristianRangel_ENGL254DB_Short-Story-Draft-3_4-22-24.pdf",
+      pdfUrl:
+        "/posts/ChristianRangel_ENGL254DB_Short-Story-Draft-3_4-22-24.pdf",
     },
     {
       id: 2,
@@ -31,7 +32,46 @@ const CreativeWriting: React.FC = () => {
     },
   ];
 
- 
+  const readings = [
+    {
+      id: 1,
+      title: "Why I like Country Music, an analysis",
+      author: "Christian Rangel",
+      date: "1/18/24",
+      course: "Art of the Short Story",
+      highlights: ["Paper", "Analysis", "Report"],
+      pdfUrl: "/posts/Christian_McPherson_Reading.pdf",
+    },
+    {
+      id: 2,
+      title: "Reading/Response: 'Manus' by Anjali Sachdeva",
+      author: "Christian Rangel",
+      date: "3/28/24",
+      course: "The Art of the Short Story",
+      highlights: ["Paper", "Analysis", "Reading", "fiction"],
+      pdfUrl: "/posts/Christian_Reading_Manus-1.pdf",
+    },
+    {
+      id: 3,
+      title:
+        "Reading/Response: “Everything Is Far From Here” by Cristina Henríquez",
+      author: "Christian Rangel",
+      date: "3/06/24",
+      course: "The Art of the Short Story",
+      highlights: ["Paper", "Analysis", "Reading"],
+      pdfUrl: "/posts/short-story1.pdf",
+    },
+    {
+      id: 4,
+      title: "Reading/Response: “Sea Oak” by George Saunders",
+      author: "Christian Rangel",
+      date: "3/30/24",
+      course: "The Art of the Short Story",
+      highlights: ["Paper", "Analysis", "Reading"],
+      pdfUrl: "/posts/Christian_Reading_Sea-Oak-1.pdf",
+    },
+  ];
+
   const writingSamples = [
     {
       id: 1,
@@ -44,55 +84,75 @@ const CreativeWriting: React.FC = () => {
     },
     {
       id: 2,
-      title: "Why I like Country Music, an analysis",
+      title: "The 'Prohibition'",
       author: "Christian Rangel",
-      date: "1/18/24",
-      course: "Art of the Short Story",
-      highlights: ["Paper", "Analysis", "Report"],
-      pdfUrl: "/posts/Christian_McPherson_Reading.pdf",
+      date: "1/17/24",
+      course: "The Art of the Short Story",
+      highlights: ["Short Story", "Memoir", "Nonfiction"],
+      pdfUrl: "/posts/Christian_story_prohibition.pdf",
     },
     {
       id: 3,
-      title: "Reading/Response: 'Manus' by Anjali Sachdeva",
+      title: "The New House",
       author: "Christian Rangel",
-      date: "3/28/24",
-      course: "The Art of the Short Story",
-      highlights: ["Paper", "Analysis", "Reading", "fiction"],
-      pdfUrl: "/posts/Christian_Reading_Manus-1.pdf",
+      date: "2/02/24",
+      course: "Art of the Short Story",
+      highlights: ["Writing Sample", "Fiction"],
+      pdfUrl: "/posts/Christian_The_new_house.pdf",
     },
     {
       id: 4,
-      title:
-        "Reading/Response: “Everything Is Far From Here” by Cristina Henríquez",
+      title: "The Blind Writer",
       author: "Christian Rangel",
-      date: "3/06/24",
-      course: "The Art of the Short Story",
-      highlights: ["Paper", "Analysis", "Reading"],
-      pdfUrl: "/posts/short-story1.pdf",
+      date: "2/08/24",
+      course: "Art of the Short Story",
+      highlights: ["Writing Sample", "Fiction"],
+      pdfUrl: "/posts/Christian_the_Blind_Writer.pdf",
     },
     {
       id: 5,
-      title:
-        "Reading/Response: “Sea Oak” by George Saunders",
+      title: "Showing/Telling",
       author: "Christian Rangel",
-      date: "3/30/24",
-      course: "The Art of the Short Story",
-      highlights: ["Paper", "Analysis", "Reading"],
-      pdfUrl: "/posts/Christian_Reading_Sea-Oak-1.pdf",
+      date: "3/11/24",
+      course: "Art of the Short Story",
+      highlights: ["Writing Sample", "Fiction"],
+      pdfUrl: "/posts/Christian_Showing_Telling.pdf",
+    },
+    {
+      id: 6,
+      title: "The Bandit's Story",
+      author: "Christian Rangel",
+      date: "4/3/24",
+      course: "Art of the Short Story",
+      highlights: ["Writing Sample", "Fiction", "Nonfiction"],
+      pdfUrl: "/posts/Christian_Bandit's-Story.pdf",
     },
   ];
+
   return (
     <>
       <VStack align="start" spacing={5}>
         <Box>
-          <Heading m={4} color={"white"}>Short Stories</Heading>
+          <Heading m={4} color={"white"}>
+            Short Stories
+          </Heading>
           {shortStories.map((work) => (
             <WorkCard work={work} key={work.id} />
           ))}
         </Box>
         <Box>
-          <Heading m={4} color={"white"}>Writing Samples</Heading>
+          <Heading m={4} color={"white"}>
+            Writing Samples
+          </Heading>
           {writingSamples.map((work) => (
+            <WorkCard work={work} key={work.id} />
+          ))}
+        </Box>
+        <Box>
+          <Heading m={4} color={"white"}>
+            Readings
+          </Heading>
+          {readings.map((work) => (
             <WorkCard work={work} key={work.id} />
           ))}
         </Box>
@@ -122,17 +182,30 @@ const WorkCard = ({ work }: { work: any }) => (
     <Text fontSize="md">{work.date}</Text>
     <Text fontSize="md">{work.course}</Text>
     <HStack spacing={2} wrap="wrap">
-      {work.highlights.map((highlight: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (
-        <Tag
-          size="md"
-          key={index}
-          borderRadius="full"
-          variant="solid"
-          background={"#905da2"}
-        >
-          {highlight}
-        </Tag>
-      ))}
+      {work.highlights.map(
+        (
+          highlight:
+            | string
+            | number
+            | boolean
+            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+            | Iterable<React.ReactNode>
+            | React.ReactPortal
+            | null
+            | undefined,
+          index: React.Key | null | undefined
+        ) => (
+          <Tag
+            size="md"
+            key={index}
+            borderRadius="full"
+            variant="solid"
+            background={"#905da2"}
+          >
+            {highlight}
+          </Tag>
+        )
+      )}
     </HStack>
     <ChakraLink
       href={work.pdfUrl}

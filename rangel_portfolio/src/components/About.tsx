@@ -44,7 +44,7 @@ const About = () => {
               w="100%"
               p={{ base: 0, md: 5 }}
             >
-              Hello! I'm Christian and I'm a second year Computer Science
+              Hello! I'm Christian and I'm a third year Computer Science
               student major at Point Park University with an interest in web
               development and Design. With my creative ideas and skill set, I
               enjoy creating applications that are visually appealing and
