@@ -12,6 +12,15 @@ const AcademicWork: React.FC = () => {
   const academicWorks = [
     {
       id: 1,
+      title: "Congestion Pricing Analysis",
+      author: "Christian Rangel",
+      date: "3/21/24",
+      course: "Operations Management and Quantitative Analysis",
+      highlights: ["Paper", "Analytical", "Research"],
+      pdfUrl: "/posts/Congestion_Pricing_analysis.pdf", // Make sure this is the correct path
+    },
+    {
+      id: 2,
       title: "Charlie Wilson's War: A book review",
       author: "Christian Rangel",
       date: "10/28/23",
@@ -20,7 +29,7 @@ const AcademicWork: React.FC = () => {
       pdfUrl: "/posts/charlie_review.pdf", // Make sure this is the correct path
     },
     {
-      id: 2,
+      id: 3,
       title: "The Privatization of Government Functions",
       author: "Christian Rangel",
       date: "10/28/23",
@@ -29,14 +38,14 @@ const AcademicWork: React.FC = () => {
       pdfUrl: "/posts/final_essay.pdf",
     },
     {
-      id: 3,
+      id: 4,
       title:
         "Reading/Response: “Everything Is Far From Here” by Cristina Henríquez",
       author: "Christian Rangel",
       date: "3/06/24",
       course: "The Art of the Short Story",
       highlights: ["Paper", "Analysis", "Reading"],
-      pdfUrl: "/posts/short-story1.pdf"
+      pdfUrl: "/posts/short-story1.pdf",
     },
   ];
 
