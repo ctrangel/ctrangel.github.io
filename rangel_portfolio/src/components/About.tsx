@@ -87,7 +87,7 @@ const About = () => {
               w={{ base: "270px", sm: "315px" }}
               h={{ base: "270px", sm: "315px" }}
               m={{ base: 0, md: 5 }}
-              src="/DSC_0021-removebg-preview.png"
+              src="/media/yearn-cow.jpg"
             ></Image>
           </Box>
         </Flex>

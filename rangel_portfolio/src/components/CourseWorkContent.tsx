@@ -118,8 +118,8 @@ const CourseWorkContent: React.FC<CourseWorkContentProps> = ({
             "Examines the role of individual and group behavior within work organizations",
         },
         {
-          name: "Human Resources Management",
-          details: "Overview of HR functions.",
+          name: "Western Civilization",
+          details: "History of Western Civilization from the 15th century to the 20th century.",
         },
         {
           name: "Principles of Marketing and Sales",
@@ -164,8 +164,8 @@ const CourseWorkContent: React.FC<CourseWorkContentProps> = ({
             "Students will write and critique original fiction in a workshop setting.",
         },
         { 
-          name: "Public Administration",
-          details: "Introduction to public administration and policy-making.",
+          name: "Web Application Development",
+          details: "Introduction to web application development using modern technologies (PHP)",
         }
       ],
     },

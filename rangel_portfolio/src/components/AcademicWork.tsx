@@ -47,6 +47,15 @@ const AcademicWork: React.FC = () => {
       highlights: ["Paper", "Analysis", "Reading"],
       pdfUrl: "/posts/short-story1.pdf",
     },
+    {
+      id: 5,
+      title: "Book Review: Band of Brothers",
+      author: "Christian Rangel",
+      date: "8/23/24",
+      course: "Western Civilization",
+      highlights: ["Paper", "Analysis", "Reading"],
+      pdfUrl: "/posts/WCBook_Review.pdf",
+    },
   ];
 
   return (
