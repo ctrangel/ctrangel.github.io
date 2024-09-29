@@ -32,6 +32,18 @@ const CreativeWriting: React.FC = () => {
     },
   ];
 
+  const poetry = [
+    {
+      id: 1,
+      title: "The City In Convergence Collection",
+      author: "Christian Rangel",
+      date: "9/28/24",
+      course: "Creative Writing",
+      highlights: ["Poetry", "Collection"],
+      pdfUrl: "posts/Rangel_The-City-In-Convergence.pdf",
+    },
+  ];
+
   const readings = [
     {
       id: 1,
@@ -137,6 +149,14 @@ const CreativeWriting: React.FC = () => {
             Short Stories
           </Heading>
           {shortStories.map((work) => (
+            <WorkCard work={work} key={work.id} />
+          ))}
+        </Box>
+        <Box>
+          <Heading m={4} color={"white"}>
+            Poetry
+          </Heading>
+          {poetry.map((work) => (
             <WorkCard work={work} key={work.id} />
           ))}
         </Box>
