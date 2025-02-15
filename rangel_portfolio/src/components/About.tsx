@@ -34,6 +34,20 @@ const About = () => {
           <Text color={"white"} fontSize={"40px"}>
             Me
           </Text>
+          <a
+            href="https://www.linkedin.com/in/christian-rangel-9406a0189/"
+            target="_blank"
+          >
+            <Image
+              src="/media/headshot2.jpg"
+              alt="LinkedIn"
+              width="200px"
+              height="200px"
+              borderRadius="full"
+              objectFit="cover"
+              ml={5}
+            />
+          </a>
         </Box>
         <Flex display={"flex"} flexDir={{ base: "column", md: "row" }}>
           <Container>
@@ -44,26 +58,34 @@ const About = () => {
               w="100%"
               p={{ base: 0, md: 5 }}
             >
-              Hello! I'm Christian and I'm a third year Computer Science
-              student major at Point Park University with an interest in web
-              development and Design. With my creative ideas and skill set, I
-              enjoy creating applications that are visually appealing and
-              engaging. 
+              Hello! I'm Christian, a senior Computer Science student at Point
+              Park University, specializing in Big Data with a minor in Creative
+              Writing. My focus is on applying data analytics, GIS, and urban
+              planning principles to support sustainable and resilient city
+              development.
               <br></br>
               <br></br>
-              I'm currently learning React, TypeScript, Node.JS and Chakra UI
-              while working on my portfolio. In course work I have been building
-              API's with Express.js and also working on Server configuration
-              with freeBSD. I'm also learning QGIS and data analytics to further
-              my GIS and quantitative analysis skills.
+              I'm currently seeking an internship for Summer 2025 in data
+              analysis, GIS, or web development, with an interest in
+              applications related to urban planning and environmental policy.
+              My experience includes working with React, TypeScript, Node.js,
+              QGIS, and Express.js, as well as managing server configurations in FreeBSD.
               <br></br>
-              <br></br>I currently work part time as a web developer for Humane
-              Action Pittsburgh. I am also working on different personal
-              projects as well as consistently updating my portfolio. Feel free
-              to check out my Resume below and my photography section. If you
-              have any inquiries feel free to contact me. Thanks for visiting!
+              <br></br>
+               I currently work as an Academic Coach, helping students
+              develop effective learning strategies, and as a Web Developer for
+              Humane Action Pennsylvania, where I assist with maintaining and
+              improving digital platforms. I’m also expanding my knowledge of
+              GIS and data analytics to explore how data-driven insights can
+              inform urban and environmental policy. Feel free to check out my
+              resume and photography section, and reach out if you have any
+              inquiries. Thanks for visiting.
             </Text>
-            <ChakraLink href="/Christian_Rangel_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <ChakraLink
+              href="/Christian_Rangel_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Text
                 fontSize={"15px"}
                 textAlign={"left"}

@@ -3,7 +3,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
 import CourseWorkContent from "./CourseWorkContent";
 
 const CourseWorkNav: React.FC = () => {
-  const terms = ["Spring 23", "Fall 23", "Spring 24", "Summer 24", "Fall 24"];
+  const terms = ["Spring 23", "Fall 23", "Spring 24", "Summer 24", "Fall 24", "Spring 25"];
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (

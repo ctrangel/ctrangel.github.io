@@ -169,6 +169,35 @@ const CourseWorkContent: React.FC<CourseWorkContentProps> = ({
         }
       ],
     },
+    {
+      term: "Spring 25",
+      classes: [
+        {
+          name: "Macroeconomics",
+          details: "Introduction to macroeconomic concepts.",
+        },
+        {
+          name: "Senior Project",
+          details: "Build full stack application for real world use.",
+        },
+        {
+          name: "Creative non-fiction workshop",
+          details: "Creative non-fiction workshop.",
+        },
+        {
+          name: "Financial Managment",
+          details: "Financial management concepts.",
+        },
+        {
+          name: "Human Resource Management",
+          details: "Introduction to human resource management.",
+        },
+        {
+          name: "Career Prep",
+          details: "Preparation for the job market.",
+        }
+      ],
+    },
   ];
 
   const termData = terms.find((term) => term.term === selectedTerm);
