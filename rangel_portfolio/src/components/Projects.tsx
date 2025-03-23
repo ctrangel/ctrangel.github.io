@@ -5,9 +5,16 @@ import ProjectsHeader from "./ProjectsHeader";
 const Projects = () => {
   const projects = [
     {
+      title: "Ross Township Park Distance Zones Map",
+      imageSrc: "/media/Ross_Township_Park_Distance_Map.png",
+      description:
+        "A map of Ross Township Parks with distance zones.",
+      skills: ["QGIS"],
+      altText: "Ross Township Park Distance Zones Map image",
+    },
+    {
       title: "JarWorld API",
       githubLink: "https://github.com/ctrangel/API",
-      link: "https://ctrangel.it.pointpark.edu/",
       imageSrc: "/media/yearn-cow.jpg",
       gifSrc: "./media/JarGif.gif",
       description:
@@ -18,7 +25,6 @@ const Projects = () => {
     {
       title: "PTI Comp Page",
       githubLink: "https://github.com/ctrangel/webdesign-comp-page",
-      link: "https://ctrangel.it.pointpark.edu/info-site/",
       imageSrc: "pti-comp.png",
       description:
         "An Informational website for my club's web design competition",
@@ -38,7 +44,6 @@ const Projects = () => {
     {
       title: "Limitlesstech.solutions",
       githubLink: "https://github.com/ctrangel/Limitless-consulting",
-      link: "https://limitlesstech.solutions/pages/home.html",
       imageSrc: "/media/limitless-solutions.png",
       gifSrc: "/media/limitless-solutions.gif",
       description:
