@@ -2,7 +2,7 @@ import { Box, Heading, SimpleGrid, Container, Card } from "@chakra-ui/react";
 import { DiJsBadge } from "react-icons/di";
 import LilDude from "./LilDude";
 import TechCard from "./TechCard";
-import { SiPython, SiTypescript, SiMysql, SiC, SiReact, SiBootstrap, SiChakraui, SiGit, SiQgis, SiExpress, SiTableau } from "react-icons/si";
+import { SiPython, SiTypescript, SiMysql, SiC, SiReact, SiBootstrap, SiChakraui, SiGit, SiQgis, SiExpress, SiTableau, SiBulma } from "react-icons/si";
 import { DiRuby, DiNodejsSmall } from "react-icons/di";
 
 const Technologies = () => {
@@ -50,6 +50,10 @@ const Technologies = () => {
       name: "Bootstrap",
       icon: <SiBootstrap color={frontEndColor} size={iconSize} />,
     },
+    {
+      name: "Bulma CSS",
+      icon: <SiBulma color={frontEndColor} size={iconSize} />,
+    }
   ];
   const backEndData = [
     {
@@ -73,7 +77,11 @@ const Technologies = () => {
     {
       name: "Tableau",
       icon: <SiTableau color={toolColor} size={iconSize} />,
-    }
+    },
+    {
+      name: "Excel",
+      icon: "#",
+    },
   ];
 
   return (

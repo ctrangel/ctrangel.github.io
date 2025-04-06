@@ -64,15 +64,7 @@ const About = () => {
               planning principles to support sustainable and resilient city
               development.
               <br></br>
-              <br></br>
-              I'm currently seeking an internship for Summer 2025 in data
-              analysis, GIS, or web development, with an interest in
-              applications related to urban planning and environmental policy.
-              My experience includes working with React, TypeScript, Node.js,
-              QGIS, and Express.js, as well as managing server configurations in FreeBSD.
-              <br></br>
-              <br></br>
-               I currently work as an Academic Coach, helping students
+              <br></br>I currently work as an Academic Coach, helping students
               develop effective learning strategies, and as a Web Developer for
               Humane Action Pennsylvania, where I assist with maintaining and
               improving digital platforms. I’m also expanding my knowledge of
@@ -82,7 +74,7 @@ const About = () => {
               inquiries. Thanks for visiting.
             </Text>
             <ChakraLink
-              href="/Christian_Rangel_Resume.pdf"
+              href="Christian_Rangel_Resume-2025__.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
