@@ -6,7 +6,7 @@ import "../App.css";
 
 const PhotoSection = () => {
   return (
-    <Box mt={"3em"}>
+    <Box mt={"5em"}>
       <Box id="showcase" p={"15px"}>
         <Text
           id="pics-header"

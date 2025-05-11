@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import "./App.css";
 import { extendTheme } from "@chakra-ui/react";
 import ContentSection from "./components/ContentSection";
+import PhotoSection from "./components/PhotoSection";
 
 const breakpoints = {
   base: "0px",
@@ -61,7 +62,7 @@ function App() {
         alignItems="center"
       >
         <ContentSection />
-      </Box>
+      </Box>{" "}
       <Box
         id="Projects-section"
         h={"auto"}
@@ -85,6 +86,17 @@ function App() {
         mt={{ base: "142px" }}
       >
         <Technologies />
+      </Box>
+      <Box
+        id="Content-section"
+        h="auto"
+        backgroundColor="#2d3333"
+        display="flex"
+        flexDirection="column"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <PhotoSection />
       </Box>
       <Box
         id="Contact-section"

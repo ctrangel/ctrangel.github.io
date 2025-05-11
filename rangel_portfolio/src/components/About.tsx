@@ -106,7 +106,6 @@ const About = () => {
           </Box>
         </Flex>
       </Stack>
-      <PhotoSection />
     </Box>
   );
 };

@@ -5,10 +5,17 @@ import ProjectsHeader from "./ProjectsHeader";
 const Projects = () => {
   const projects = [
     {
+      title: "Ross West View Area State and County roads",
+      imageSrc:
+        "/media/Ross State and County Owned Roads.png",
+      description: "A map of the Ross-West View area displaying state and county managed roads according to open county and state data",
+      skills: ["QGIS","GIS"],
+      altText: "Ross West View",
+    },
+    {
       title: "Ross Township Park Distance Zones Map",
       imageSrc: "/media/Ross_Township_Park_Distance_Map.png",
-      description:
-        "A map of Ross Township Parks with distance zones.",
+      description: "A map of Ross Township Parks with distance zones.",
       skills: ["QGIS"],
       altText: "Ross Township Park Distance Zones Map image",
     },
