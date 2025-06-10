@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="./resources/ol.css" />
+    <link rel="stylesheet" href="resources/fontawesome-all.min.css" />
+    <link href="resources/ol-geocoder.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./resources/ol-layerswitcher.css" />
+    <link rel="stylesheet" href="./resources/qgis2web.css" />
+    <style>
+      html,
+      body {
+        background-color: #c0f5f7;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #title-block {
+        text-align: center;
+        margin-bottom: 5px;
+        max-width: 1000px;
+      }
+
+      #title-block h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      #title-block h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+        font-weight: normal;
+      }
+
+      #title-block p {
+        font-size: 1rem;
+        margin: 0.2rem 0;
+      }
+
+      #map {
+        width: 1254px;
+        height: 627px;
+        border: 2px solid black;
+        margin-bottom: 25px
+      }
+
+      .ol-control > * {
+        background-color: #f8f8f8 !important;
+        color: #444444 !important;
+        border-radius: 0px;
+      }
+
+      .ol-attribution a,
+      .gcd-gl-input::placeholder,
+      .search-layer-input-search::placeholder {
+        color: #444444 !important;
+      }
+
+      .search-layer-input-search {
+        background-color: #f8f8f8 !important;
+      }
+
+      .ol-control > *:focus,
+      .ol-control > *:hover {
+        background-color: rgba(248, 248, 248, 0.7) !important;
+      }
+
+      .ol-control {
+        background-color: rgba(255, 255, 255, 0.4) !important;
+        padding: 2px !important;
+      }
+    </style>
+    <title>U.S. Downtown Colleges and Universities</title>
+  </head>
+  <body>
+    <div id="title-block">
+      <h1>Point Park Student Government Association</h1>
+      <h2>Research Regarding Downtown Universities in the U.S.</h2>
+      <p><strong>by Christian Rangel</strong> </p>
+      <p><strong>Point Park University</strong></p>
+      <p><strong>Date:</strong> 6/9/25</p>
+    </div>
+
+    <div id="map">
+      <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+      </div>
+    </div>
+
+    <script src="resources/qgis2web_expressions.js"></script>
+    <script src="resources/proj4.js"></script>
+    <script>
+      proj4.defs(
+        "EPSG:3857",
+        "+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs"
+      );
+    </script>
+    <script src="./resources/functions.js"></script>
+    <script src="./resources/ol.js"></script>
+    <script src="./resources/ol-layerswitcher.js"></script>
+    <script src="resources/ol-geocoder.js"></script>
+    <script src="layers/top67uscities_1.js"></script>
+    <script src="layers/DowntownAreas_2.js"></script>
+    <script src="layers/DowntownInstitutions_3.js"></script>
+    <script src="styles/top67uscities_1_style.js"></script>
+    <script src="styles/DowntownAreas_2_style.js"></script>
+    <script src="styles/DowntownInstitutions_3_style.js"></script>
+    <script src="./layers/layers.js" type="text/javascript"></script>
+    <script src="./resources/Autolinker.min.js"></script>
+    <script src="./resources/qgis2web.js"></script>
+  </body>
+</html>

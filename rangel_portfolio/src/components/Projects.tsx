@@ -5,11 +5,21 @@ import ProjectsHeader from "./ProjectsHeader";
 const Projects = () => {
   const projects = [
     {
+      title: "Downtown Areas Web Map",
+      imageSrc: "/media/downtown-map-thumbnail.png", 
+      projectLink: "/webmap-openlayers/index.html", 
+      description:
+        "An interactive OpenLayers web map visualizing colleges and universities within downtown areas across U.S.",
+      skills: ["QGIS", "OpenLayers", "Web Mapping","Data Visualization"],
+      altText: "Interactive Downtown Areas Web Map",
+      link: "/mapFiles/index.html"
+    },
+    {
       title: "Ross West View Area State and County roads",
-      imageSrc:
-        "/media/Ross State and County Owned Roads.png",
-      description: "A map of the Ross-West View area displaying state and county managed roads according to open county and state data",
-      skills: ["QGIS","GIS"],
+      imageSrc: "/media/Ross State and County Owned Roads.png",
+      description:
+        "A map of the Ross-West View area displaying state and county managed roads according to open county and state data",
+      skills: ["QGIS", "GIS"],
       altText: "Ross West View",
     },
     {
