@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -17,10 +17,11 @@
     <style>
       html,
       body {
-        background-color: #c0f5f7;
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
+        background-color: #c0f5f7;
+        height: 100%;
       }
 
       body {
@@ -31,43 +32,43 @@
 
       #title-block {
         text-align: center;
-        margin-bottom: 5px;
-        max-width: 1000px;
+        padding: 15px;
+        max-width: 90%;
       }
 
       #title-block h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        margin: 0.2rem 0;
       }
 
       #title-block h2 {
-        font-size: 1.4rem;
-        margin-bottom: 1.2rem;
+        font-size: 1.2rem;
+        margin: 0.2rem 0;
         font-weight: normal;
       }
 
       #title-block p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin: 0.2rem 0;
       }
 
       #map {
-        width: 1254px;
-        height: 627px;
+        width: 95%;
+        height: 65vh;
         border: 2px solid black;
-        margin-bottom: 25px
+        margin: 10px 0 25px 0;
       }
 
       .ol-control > * {
         background-color: #f8f8f8 !important;
-        color: #444444 !important;
-        border-radius: 0px;
+        color: #444 !important;
+        border-radius: 0;
       }
 
       .ol-attribution a,
       .gcd-gl-input::placeholder,
       .search-layer-input-search::placeholder {
-        color: #444444 !important;
+        color: #444 !important;
       }
 
       .search-layer-input-search {
@@ -83,6 +84,43 @@
         background-color: rgba(255, 255, 255, 0.4) !important;
         padding: 2px !important;
       }
+
+      .ol-popup {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        bottom: 12px;
+        left: -50px;
+        min-width: 200px;
+        z-index: 100;
+      }
+
+      .ol-popup-closer {
+        position: absolute;
+        top: 2px;
+        right: 8px;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width: 600px) {
+        #title-block h1 {
+          font-size: 1.5rem;
+        }
+
+        #title-block h2 {
+          font-size: 1rem;
+        }
+
+        #map {
+          height: 60vh;
+          width: 100%;
+        }
+
+        .ol-popup {
+          min-width: 160px;
+        }
+      }
     </style>
     <title>U.S. Downtown Colleges and Universities</title>
   </head>
@@ -90,14 +128,14 @@
     <div id="title-block">
       <h1>Point Park Student Government Association</h1>
       <h2>Research Regarding Downtown Universities in the U.S.</h2>
-      <p><strong>by Christian Rangel</strong> </p>
+      <p><strong>by Christian Rangel</strong></p>
       <p><strong>Point Park University</strong></p>
       <p><strong>Date:</strong> 6/9/25</p>
     </div>
 
     <div id="map">
       <div id="popup" class="ol-popup">
-        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <a href="#" id="popup-closer" class="ol-popup-closer">×</a>
         <div id="popup-content"></div>
       </div>
     </div>
